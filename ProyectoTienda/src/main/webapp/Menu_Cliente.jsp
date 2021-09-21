@@ -15,7 +15,7 @@
     	<div class="titulo-logo"> 
     		<div class="logo"></div>
     	</div>
-    	<h1 class="titulo_usu">Menu Cliente</h1>
+    	<h1 class="titulo_usu">Menú Cliente</h1>
         <nav>
             <ul class="main-nav">
                 <li class="main-nav__item"><a href="home.jsp">Inicio</a></li>

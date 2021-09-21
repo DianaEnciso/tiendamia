@@ -18,7 +18,7 @@ src:url("../fonts/Roboto-Regular.ttf");
 
 
 body{
-	background-image: url("../imgs/background_proveedores.jpg");
+	background-image: url("../imgs/background_productos.jpg");
 	background-size: cover;
 	font-family: Roboto;
 }
@@ -73,7 +73,7 @@ body{
 	font-weight: bold;		
 }
 
-.titu-prov h2
+.titu-repor h2
 {
 	display: flexbox;
 	flex-wrap: nowrap;
