@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Menú Usuarios</title>
-<link href="css/style.css" rel="stylesheet">
+<link href="css/usuario.css" rel="stylesheet">
 
 
 </head>

@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Menu Clientes</title>
-<link href="css/style.css" rel="stylesheet">
+<link href="css/cliente.css" rel="stylesheet">
 
 </head>
 <body>

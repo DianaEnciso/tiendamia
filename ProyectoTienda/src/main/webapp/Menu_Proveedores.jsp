@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Menú Proveedores</title>
+<link href="css/proveedor.css" rel="stylesheet">
 </head>
 <body>
 
