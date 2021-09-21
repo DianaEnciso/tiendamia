@@ -14,7 +14,7 @@
     	</div>
         <nav>
             <ul class="main-nav">
-                <li class="main-nav__item"><a href="">Usuarios OTRAVEZ</a></li>
+                <li class="main-nav__item"><a href="">Usuarios</a></li>
                 <li class="main-nav__item"><a href="">Clientes</a></li>
                 <li class="main-nav__item"><a href="">Proveedores</a></li>
                 <li class="main-nav__item"><a href="">Productos</a></li>
