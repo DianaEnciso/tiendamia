@@ -21,7 +21,7 @@
                 <li class="main-nav__item"><a href="Menu_Cliente.jsp">Clientes</a></li>
                 <li class="main-nav__item"><a href="Menu_Ventas.jsp">Ventas</a></li>
                 <li class="main-nav__item"><a href="Menu_Proveedores.jsp">Proveedores</a></li>
-                <li class="main-nav__item"><a href="Menu_Reportes.jsp">Reportes</a></li>
+                <li class="main-nav__item"><a href="Menu_Productos.jsp">Productos</a></li>
 				<li class="main-nav__item"><a href="">Cliente</a></li>
             </ul>
         </nav>
