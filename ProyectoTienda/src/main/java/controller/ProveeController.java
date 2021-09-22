@@ -39,6 +39,8 @@ public class ProveeController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
+		
+		
 		int nit;
 		String name, city, address, tele;
 		
@@ -46,7 +48,10 @@ public class ProveeController extends HttpServlet {
 		
 		ProveedoresDAO prodao;
 		ProveedoresDTO prodto;
+		ProveedoresDTO proguard;
 		
+		
+		//INSERTAR PROVEEDOR
 		
 		if(request.getParameter("btning")!=null)
 		{
@@ -56,23 +61,120 @@ public class ProveeController extends HttpServlet {
 			address=request.getParameter("direccion");
 			tele=request.getParameter("telefono");
 			
+			
+			if(name.equals("") || city.equals("") || address.equals("") || tele.equals(""))
+			{
+				JOptionPane.showMessageDialog(null, "Por favor rellene todos los campos");
+				response.sendRedirect("Menu_Proveedores.jsp");
+				
+			}
+			else
+			{
+				prodto= new ProveedoresDTO(nit, name, city, address, tele);
+				prodao= new ProveedoresDAO();
+				
+				respu=prodao.insertarproovedor(prodto);
+				
+				if(respu==true)
+				{
+					JOptionPane.showMessageDialog(null, "Proveedor registrado");
+					response.sendRedirect("Menu_Proveedores.jsp");
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "Proveedor no registrado");
+					response.sendRedirect("Menu_Proovedores.jsp");
+				}
+			}
+		}
+			
+	
+		
+		//CONSULTAR PROVEEDOR
+		
+		
+		if(request.getParameter("btnconsu")!=null)
+		{
+			int num_nit;
+			
+			nit=Integer.parseInt(request.getParameter("nit"));
+			prodto= new ProveedoresDTO(nit);
+			prodao= new ProveedoresDAO();
+			proguard=prodao.consultarproveedor(prodto);
+			
+			if(proguard!=null)
+			{
+				num_nit=proguard.getNit();
+				name=proguard.getName();
+				city=proguard.getCity();
+				address=proguard.getAddress();
+				tele=proguard.getTele();
+				
+				response.sendRedirect("Menu_Proveedores.jsp?nit="+num_nit+"&&nom="+name+"&&ciu="+city+"&&dir="+address+"&&tel="+tele);
+				JOptionPane.showMessageDialog(null, "Proveedor consultado y encontrado");
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "El proveedor no existe en la base de datos");
+				response.sendRedirect("Menu_Proveedores.jsp");
+			}
+			
+		}
+		
+		
+		
+		//ACTUALIZAR PROVEEDOR
+		
+		if(request.getParameter("btnactua")!=null)
+		{
+			boolean dato;
+			
+			nit=Integer.parseInt(request.getParameter("nit"));
+			name=request.getParameter("nombre");
+			city=request.getParameter("ciudad");
+			address=request.getParameter("direccion");
+			tele=request.getParameter("telefono");
+			
 			prodto= new ProveedoresDTO(nit, name, city, address, tele);
 			prodao= new ProveedoresDAO();
+			dato=prodao.actualizar(prodto);
 			
-			respu=prodao.insertarproovedor(prodto);
-			
-			if(respu==true)
+			if(dato=true)
 			{
-				JOptionPane.showMessageDialog(null, "Proveedor registrado");
+				JOptionPane.showMessageDialog(null, "El proveedor ha sido actualizado");
 				response.sendRedirect("Menu_Proveedores.jsp");
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(null, "Proveedor no registrado");
-				response.sendRedirect("Menu_Proovedores.jsp");
+				JOptionPane.showMessageDialog(null, "El proveedor no pudo ser actualizado");
+				response.sendRedirect("Menu_Proveedores.jsp");
+			}
+		}
+		
+		//ELIMINAR PROVEEDOR
+		
+		if(request.getParameter("btnelimi")!=null)
+		{
+			
+			int p=0;
+			nit=Integer.parseInt(request.getParameter("nit"));
+			prodto= new ProveedoresDTO(nit);
+			prodao= new ProveedoresDAO();
+			p=prodao.eliminarproveedor(prodto);
+			
+			if(p>0)
+			{
+				JOptionPane.showMessageDialog(null, "El proveedor fue eliminado");
+				response.sendRedirect("Menu_Proveedores.jsp");
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "El proveedor no pudo ser eliminado");
+				response.sendRedirect("Menu_Proveedores.jsp");
 			}
 		}
 		
 	}
 
+	
 }

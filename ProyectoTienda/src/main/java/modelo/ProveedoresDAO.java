@@ -4,10 +4,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import javax.swing.JOptionPane;
-
 import controller.Conexion;
+
 
 public class ProveedoresDAO 
 
@@ -16,7 +15,8 @@ public class ProveedoresDAO
 	Connection cnn=con.conexiondb();
 	PreparedStatement ps;
 	ResultSet rs;
-	ProveedoresDTO prove;
+	ProveedoresDTO proveedor;
+	
 	
 	//INSERTAR PROVEEDOR
 	
@@ -42,7 +42,7 @@ public class ProveedoresDAO
 			
 		} catch (SQLException e) 
 		{
-			JOptionPane.showMessageDialog(null, "Error al insertar proveedor" + e);
+			JOptionPane.showMessageDialog(null, "Error al insertar el proveedor" + e);
 			e.printStackTrace();
 		}
 		return dato;
@@ -50,6 +50,90 @@ public class ProveedoresDAO
 	}
 	
 	
+	
+	//CONSULTAR PROVEEDOR
+	
+	public ProveedoresDTO consultarproveedor(ProveedoresDTO prove)
+	{
+		
+		try 
+		{
+			ps=cnn.prepareStatement("SELECT * FROM proveedores WHERE nit_proveedor=?");
+			ps.setInt(1, prove.getNit());
+			rs=ps.executeQuery();
+			
+			if(rs.next())
+			{
+				proveedor= new ProveedoresDTO (rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5));
+			}
+			
+			
+		} catch (SQLException e) 
+		{
+			JOptionPane.showMessageDialog(null, "Error al consultar el proveedor" + e);
+			e.printStackTrace();
+		}
+		
+		return proveedor;
+		
+	}
+	
+	
+	
+	//ACTUALIZAR PROVEEDOR
+	
+	public boolean actualizar(ProveedoresDTO prove)
+	{
+		boolean dato=false;
+		int x;
+		
+		try 
+		{
+			ps=cnn.prepareStatement("UPDATE proveedores SET nombre_proveedor=?, ciudad_proveedor=?, direccion_proveedor=?, telefono_proveedor=? WHERE nit_proveedor=?");
+			ps.setString(1, prove.getName());
+			ps.setString(2, prove.getCity());
+			ps.setString(3, prove.getAddress());
+			ps.setString(4, prove.getTele());
+			ps.setInt(5, prove.getNit() );
+			
+			x=ps.executeUpdate();
+			if(x>0)
+			{
+				dato=true;
+			}
+			
+		} catch (SQLException e) 
+		{
+			
+			e.printStackTrace();
+		}
+		return dato;
+	}
+	
+	
+	
+	
+	//ELIMINAR PROVEEDOR 
+	
+	public int eliminarproveedor(ProveedoresDTO prove)
+	{
+		int x=0;
+		
+		try 
+		{
+			ps=cnn.prepareStatement("DELETE FROM proveedores WHERE nit_proveedor=?");
+			ps.setInt(1, prove.getNit());
+			x=ps.executeUpdate();
+			
+			
+		} catch (SQLException e) 
+		{
+			JOptionPane.showMessageDialog(null, "Error al eliminar el proveedor " + e);
+			e.printStackTrace();
+		}
+		
+	return x;
+	}
 	
 	
 }

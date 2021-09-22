@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
 <title>Menu Proveedores</title>
 <link href="css/proveedor.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -44,7 +44,7 @@
 		nit=request.getParameter("nit");
 		nombre=request.getParameter("nom");
 		ciudad=request.getParameter("ciu");
-		direccion=request.getParameter("direc");
+		direccion=request.getParameter("dir");
 		tele=request.getParameter("tel");
 		}
 

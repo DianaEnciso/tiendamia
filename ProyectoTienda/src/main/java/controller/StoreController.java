@@ -73,25 +73,34 @@ public class StoreController extends HttpServlet
 			pass=request.getParameter("clave");
 			usu=request.getParameter("usuario");
 			
-			
-			usudto= new UsuariosDTO(ced, corr, name, pass, usu);
-			usudao= new UsuariosDAO();
-			
-			respu=usudao.insertarusuario(usudto);
-			
-			if(respu==true)
+			if(corr.equals("") || name.equals("") || pass.equals("") || usu.equals(""))
 			{
-				JOptionPane.showMessageDialog(null, "Usuario registrado");
+				JOptionPane.showMessageDialog(null, "Por favor rellene todos los campos");
 				response.sendRedirect("Menu_Usuario.jsp");
+				
 			}
-			
 			else
 			{
-				JOptionPane.showMessageDialog(null, "Usuario no registrado");
-				response.sendRedirect("Menu_Usuario.jsp");
+				usudto= new UsuariosDTO(ced, corr, name, pass, usu);
+				usudao= new UsuariosDAO();
+				
+				respu=usudao.insertarusuario(usudto);
+				
+				if(respu==true)
+				{
+					JOptionPane.showMessageDialog(null, "Usuario registrado");
+					response.sendRedirect("Menu_Usuario.jsp");
+				}
+				
+				else
+				{
+					JOptionPane.showMessageDialog(null, "Usuario no registrado");
+					response.sendRedirect("Menu_Usuario.jsp");
+				}
+				
 			}
-			
 		}
+			
 		
 		
 		

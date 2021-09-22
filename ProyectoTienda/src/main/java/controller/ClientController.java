@@ -60,24 +60,36 @@ public class ClientController extends HttpServlet {
 			email=request.getParameter("correo");
 			tele=request.getParameter("telefono");
 			
-			clidto= new ClientesDTO(ced, name, direc, email, tele);
-			clidao= new ClientesDAO();
 			
-			respu=clidao.insertaruncliente(clidto);
-			
-			if(respu==true)
+			if(name.equals("") || direc.equals("") || email.equals("") || tele.equals(""))
 			{
-				JOptionPane.showMessageDialog(null, "Cliente registrado");
+				JOptionPane.showMessageDialog(null, "Por favor rellene todos los campos");
 				response.sendRedirect("Menu_Cliente.jsp");
 			}
-			
 			else
 			{
-				JOptionPane.showMessageDialog(null, "Cliente no registrado");
-				response.sendRedirect("Menu_Cliente.jsp");
+				clidto= new ClientesDTO(ced, name, direc, email, tele);
+				clidao= new ClientesDAO();
+				
+				respu=clidao.insertaruncliente(clidto);
+				
+				if(respu==true)
+				{
+					JOptionPane.showMessageDialog(null, "Cliente registrado");
+					response.sendRedirect("Menu_Cliente.jsp");
+				}
+				
+				else
+				{
+					JOptionPane.showMessageDialog(null, "Cliente no registrado");
+					response.sendRedirect("Menu_Cliente.jsp");
+				}
+				
+			}
+				
+				
 			}
 			
-		}
 		
 		
 		//CONSULTAR UN CLIENTE
