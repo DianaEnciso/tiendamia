@@ -66,15 +66,9 @@ body{
 }
 
 
-.titulo_usu
+.tit_welcome
 {
-	text-align: center;
-	font-size: 30px;
-	font-weight: bold;		
-}
-
-.titu-prov h2
-{
+	
 	display: flexbox;
 	flex-wrap: nowrap;
 	align-content: flex-end;
@@ -82,8 +76,70 @@ body{
 	font-size: 28px;
 	font-weight: bold;	
 	/*margin: 180px 250px 0 0;*/
-	margin-left: 200px;
-	margin-right: 180px;
-	margin-top: 130px;
+	margin-left: 250px;
+	margin-right: 100px;
+	margin-top: 180px;
 	text-decoration: underline;
+	
+	
 }
+.titulo_usu
+{
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;		
+}
+
+.formulario {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	align-items: flex-end;
+	margin: 100px 100px 75px 0;
+}
+
+.formulario h2 {
+	margin-bottom: 20px;
+	font-size: 25px;
+	font-weight: bold;
+	border-bottom: 2px solid black;
+	margin-right: 70px;
+}
+
+.userForm {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+}
+
+.userForm label {
+	font-weight: bold;
+	margin: 5px 0;
+}
+
+.userForm input {
+	padding: 8px 10px;
+	border-radius: 5px;
+}
+
+.send_data {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0 0 0;
+}
+
+.send_data input {
+	padding: 8px 10px;
+	border-radius: 5px;
+	border-style: none;
+	cursor: pointer;
+	background-color: #6c965efc;
+	color: white;
+}
+
+.send_data input:hover {
+	background-color: #416137fc;
+}
+
+
+

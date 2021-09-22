@@ -7,7 +7,7 @@
 <meta charset="ISO-8859-1">
 <title>Home Store</title>
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/Menu_Nav.css">
+
 </head>
 
 
@@ -17,8 +17,8 @@
     	</div>
         <nav>
             <ul class="main-nav">
-                <li class="main-nav__item"><a id="a" href="Menu_Usuario.jsp"></a></li>
-                <li class="main-nav__item"><a id="b" href="Menu_Cliente.jsp">Clientes</a></li>
+                <li class="main-nav__item"><a href="Menu_Usuario.jsp">Usuarios</a></li>
+                <li class="main-nav__item"><a href="Menu_Cliente.jsp">Clientes</a></li>
                 <li class="main-nav__item"><a href="Menu_Proveedores.jsp">Proveedores</a></li>
                 <li class="main-nav__item"><a href="Menu_Productos.jsp">Productos</a></li>
                 <li class="main-nav__item"><a href="Menu_Ventas.jsp">Ventas</a></li>

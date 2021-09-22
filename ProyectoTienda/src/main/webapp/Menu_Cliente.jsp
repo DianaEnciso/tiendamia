@@ -10,7 +10,6 @@
 </head>
 <body>
 
-
 <header>    
     	<div class="titulo-logo"> 
     		<div class="logo"></div>
@@ -29,6 +28,7 @@
         </nav>
         
         </header>
+        
 <div class="formulario">
 
     	<h2>Bienvenido Cliente</h2>
