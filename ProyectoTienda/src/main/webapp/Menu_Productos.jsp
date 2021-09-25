@@ -41,6 +41,32 @@
 	               <li class="main-nav__itemU"><a href="index.jsp" class="exit_session"><%=da%></a></li>
 	           </ul>
 	   	</header>
+	   	
+	<div class="formulario">
+<h2>Gestión de productos</h2>
+<form action="ProductosController" method="post" class="userForm">
+	    	<label for="user-cc">Código del producto</label>
+	    	<input type="text" name="cod" placeholder="Digita el código del producto"  required> 
+	    	<label for="user-cc">Nombre del producto</label>
+	    	<input type="text" name="nom" placeholder="Digita el nombre del producto"  > 
+	    	<label for="user-cc">Nit del proveedor</label>
+	    	<input type="text" name="nit" placeholder="Digita tel NIT del proveedor"  > 
+	    	<label for="user-cc">Precio compra</label>
+	    	<input type="text" name="prec_c" placeholder="Digita el precio de compra"  > 
+	    	<label for="user-cc">IVA compra</label>
+	    	<input type="text" name="iva" placeholder="Digita el IVA"  > 
+	    	<label for="user-cc">Precio venta</label>
+	    	<input type="text" name="prec_v" placeholder="Digita el precio de venta"  >  
+	    	<div class="send_data" id="sd_prod">
+		    	<!--<input type="submit" name="btn_crearU" value="Crear">-->
+		    	<input type="submit" name="btn_consPD" value="Consultar">
+		    	<div id="separador"></div>
+		    	<input type="submit" name="btn_actPD" value="Actualizar">
+		    	<!--<input type="submit" name="btn_elimPD" value="Eliminar">-->
+		    
+		    </div>  	    	
+	    </form>	
+</div>   	
        
 	</div>
 
@@ -48,3 +74,4 @@
 
 </body>
 </html>
+
