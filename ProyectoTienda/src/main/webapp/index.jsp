@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>TiendaG3</title>
+<title>MinFruver</title>
 <link href="css/style.css" rel="stylesheet">
 </head>
  <header>    
