@@ -7,41 +7,43 @@
 <meta charset="ISO-8859-1">
 <title>Home Store</title>
 <link rel="stylesheet" href="css/style.css">
-
+<link rel="stylesheet" href="css/Menu_Nav.css">
 </head>
 
+<%
+	Conexion con=new Conexion();
+	con.conexiondb();
+%>
 
-    <header>    
-    	<div class="titulo-logo"> 
-    		<div class="logo"></div>
-    	</div>
-        <nav>
+<body>
+	<div class="home">
+    	<header class="navbar">    
+    		<div class="titulo-logo"> 
+    			<a href="home.jsp"><img alt="Logo minfruver" src="imgs/MinFruver_logo_Mesa de trabajo 1.png" class="logo"></a>
+    		</div>
+    		
             <ul class="main-nav">
-                <li class="main-nav__item"><a href="Menu_Usuario.jsp">Usuarios</a></li>
-                <li class="main-nav__item"><a href="Menu_Cliente.jsp">Clientes</a></li>
-                <li class="main-nav__item"><a href="Menu_Proveedores.jsp">Proveedores</a></li>
-                <li class="main-nav__item"><a href="Menu_Productos.jsp">Productos</a></li>
-                <li class="main-nav__item"><a href="Menu_Ventas.jsp">Ventas</a></li>
-                <li class="main-nav__item"><a href="Menu_Reportes.jsp">Reportes</a></li>
+                <li class="main-nav__item"><a href="Menu_Usuario.jsp"><img alt="Usuarios" src="imgs/items_Mesa de trabajo 1.png"></a></li>
+                <li class="main-nav__item"><a href="Menu_Cliente.jsp"><img alt="Clientes" src="imgs/items-02.png"></a></li>
+                <li class="main-nav__item"><a href="Menu_Proveedores.jsp"><img alt="Proveedores" src="imgs/items-03.png"></a></li>
+                <li class="main-nav__item"><a href="Menu_Productos.jsp"><img alt="Productos" src="imgs/items-04.png"></a></li>
+                <li class="main-nav__item"><a href="Menu_Ventas.jsp"><img alt="Ventas" src="imgs/items-05.png"></a></li>
+                <li class="main-nav__item"><a href="Menu_Reportes.jsp"><img alt="Reportes" src="imgs/items-06.png"></a></li>
                 <%
-                
                 String da="";
                 if(request.getParameter("da") ==null)
                 {
-                
 					da=request.getParameter("dato");
                 }
 				%>
-                <li class="main-nav__item"><a href=""><%=da%></a></li>
+                <li class="main-nav__itemU"><a href="index.jsp" class="exit_session"><%=da%></a></li>
             </ul>
-        </nav>
-    </header>
-    
-<body>
-	<div class="tit_welcome">
-   <h1>Bienvenido a Min Fruver <%=da %></h1>
-   </div> 
-
+    	</header>
+    	
+    	<h1 class="msj_welcome">Bienvenido a MinFruver.</h1> 
+	 	<p class="p_welcome">La plaza de mercado digital al alcance de tu mano</p>
+   
+	</div>
 
 </body>
 </html>

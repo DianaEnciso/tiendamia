@@ -16,35 +16,37 @@ q:before, q:after { content:''; }
 src:url("../fonts/Roboto-Regular.ttf");
 }
 
-.main-nav{
-    margin-top: 5px;
-    
-    margin-right: 2px;
-    width: 50%;
-    height: 20px;
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1px;
 }
 
-.main-nav__item{
-    
-    display: inline-block;
-    align-items: right;
-    justify-content: flex-end;
-    margin-right: 2px;
-    width: 12%;
-    
+.titulo-logo {
+	width: 35%;
+} 
+.logo {
+	width: 200px;
+	padding-left: 30px;
 }
 
-.main-nav__item #a
-{
-    
-    flex-wrap: nowrap;
-    background-image: url("../imgs/items_Mesa de trabajo 1.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 5px;
-    margin-right: 10px;
-    height: 13px;
-    
-    
+.main-nav {
+	width: 65%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+}
 
+.main-nav__item img {
+	width: 60px;
+}
+
+.main-nav__itemU .exit_session {
+	background-color: #0C331B;
+	color: #ffffff;
+	border-radius: 20px;
+	padding: 10px 45px;
+	text-decoration: none;
 }

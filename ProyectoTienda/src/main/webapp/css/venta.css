@@ -16,74 +16,8 @@ q:before, q:after { content:''; }
 src:url("../fonts/Roboto-Regular.ttf");
 }
 
-
-body{
+.venta {
 	background-image: url("../imgs/background_ventas.jpg");
 	background-size: cover;
-	font-family: Roboto;
-}
-
-.main-nav{
-    margin-top: 10px;
-    list-style: none;
-    padding-right: 40px;
-    float:right;
-}
-
-.main-nav__item{
-    display: inline-block;
-    
-}
-
-.main-nav__item a{
-    padding: 5px;
-    border-radius: 2px;
-    text-decoration: none;
-
-}
-
-.logo{
-    background-image: url("../imgs/MinFruver_logo_Mesa de trabajo 1.png");
-    background-size: contain;
-    width: 150px;
-    height: 150px;
-    margin-top: 10px;
-    margin-left: 10px;    
-
-}
-
-.logo1{
-	width: 250px;
-    height: 250px;
-    margin: 0 auto; 
-}
-
-.titulo-logo{
-    display: flex;
-    width: 50%;
-    height: 50px;
-    padding-left: 5%;
-}
-
-
-.titulo_usu
-{
-	text-align: center;
-	font-size: 30px;
-	font-weight: bold;		
-}
-
-.titu-vent h2
-{
-	display: flexbox;
-	flex-wrap: nowrap;
-	align-content: flex-end;
-	text-align: right;
-	font-size: 28px;
-	font-weight: bold;	
-	/*margin: 180px 250px 0 0;*/
-	margin-left: 200px;
-	margin-right: 180px;
-	margin-top: 130px;
-	text-decoration: underline;
+	height: 100vh;
 }

@@ -20,7 +20,7 @@ public class Conexion
 			try 
 			{
 				cnn=DriverManager.getConnection("jdbc:mysql://localhost/minfruvertienda","root","");
-				JOptionPane.showMessageDialog(null,"Conexion ok");
+				//JOptionPane.showMessageDialog(null,"Conexion ok");
 				
 			} catch (SQLException e) 
 			{

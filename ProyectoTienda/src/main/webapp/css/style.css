@@ -17,62 +17,19 @@ src:url("../fonts/Roboto-Regular.ttf");
 }
 
 body{
-	
+	font-family: Roboto;
+}
+
+.home {
 	background-image: url("../imgs/home_background_Mesa de trabajo 1.png");
 	background-size: cover;
-	font-family: Roboto;
-
+	height: 100vh;
 }
-
-.main-nav{
-    margin-top: 10px;
-    list-style: none;
-    padding-right: 40px;
-    float:right;
-}
-
-.main-nav__item{
-    display: inline-block;
-    
-    
-}
-
-.main-nav__item a{
-    padding: 5px;
-    border-radius: 2px;
-    text-decoration: none;
-
-}
-
-.logo{
-    background-image: url("../imgs/MinFruver_logo_Mesa de trabajo 1.png");
-    background-size: contain;
-    width: 150px;
-    height: 150px;
-    margin-top: 10px;
-    margin-left: 10px;    
-
-}
-
-/* .logo1{
-    background-image: url("../imgs/MinFruver_logo_Mesa de trabajo 1.png");
-    background-size: contain;
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;   
-} */ 
 
 .logo1{
 	width: 250px;
     height: 250px;
     margin: 0 auto; 
-}
-
-.titulo-logo{
-    display: flex;
-    width: 50%;
-    height: 50px;
-    padding-left: 5%;
 }
 
 .window-notice {
@@ -84,8 +41,6 @@ body{
     display: flex;
     position: fixed;
     z-index: 999;
-    
-    
 }
 
 .window-notice .content {
@@ -107,6 +62,20 @@ body{
 	border-radius: 15px;
 }
 
+.msj_welcome {
+	margin-top: 100px;
+	text-align: center;
+	padding-left: 800px;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.p_welcome {
+	margin-top: 10px;
+	text-align: center;
+	padding-left: 800px;
+	font-size: 30px;
+}
 .info {
 	display: flex;
 	flex-direction: column;
@@ -157,56 +126,28 @@ body{
 
 .btn1:hover, .btn2:hover  {
 	background-color: #416137fc;
-	
-}
-
-
-/*CODIGO DE FORMULARIO DE CREAR USUARIO*/
-
-.tit_welcome
-{
-	
-	display: flexbox;
-	flex-wrap: nowrap;
-	align-content: flex-end;
-	text-align: right;
-	font-size: 28px;
-	font-weight: bold;	
-	/*margin: 180px 250px 0 0;*/
-	margin-left: 250px;
-	margin-right: 100px;
-	margin-top: 180px;
-	text-decoration: underline;
-	
-	
-}
-.titulo_usu
-{
-	text-align: center;
-	font-size: 30px;
-	font-weight: bold;		
 }
 
 .formulario {
 	display: flex;
-	flex-wrap: nowrap;
 	flex-direction: column;
 	align-items: flex-end;
-	margin: 100px 100px 75px 0;
+	margin: 0 150px 0 0;
 }
 
 .formulario h2 {
-	margin-bottom: 20px;
-	font-size: 25px;
+	margin-bottom: 10px;
+	font-size: 35px;
 	font-weight: bold;
-	border-bottom: 2px solid black;
-	margin-right: 70px;
+	border-bottom: 2px solid #D3D3D3;
+	margin-right: 90px;
 }
 
 .userForm {
 	display: flex;
 	flex-direction: column;
-	width: 30%;
+	width: 35%;
+	font-size: 20px;
 }
 
 .userForm label {
@@ -237,9 +178,6 @@ body{
 .send_data input:hover {
 	background-color: #416137fc;
 }
-
-
-
 
 
 
