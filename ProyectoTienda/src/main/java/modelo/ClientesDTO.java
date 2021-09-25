@@ -11,7 +11,7 @@ public class ClientesDTO
 	
 	
 	
-	public ClientesDTO(int cedula_clien, String nombre_clien, String direccion__clien, String email_clien,
+	public ClientesDTO(int cedula_clien, String direccion__clien, String email_clien, String nombre_clien,
 			String telef_clien) 
 	
 	{

@@ -70,7 +70,7 @@ public class ProveeController extends HttpServlet {
 			}
 			else
 			{
-				prodto= new ProveedoresDTO(nit, name, city, address, tele);
+				prodto= new ProveedoresDTO(nit, city, address, name, tele);
 				prodao= new ProveedoresDAO();
 				
 				respu=prodao.insertarproovedor(prodto);
@@ -110,7 +110,7 @@ public class ProveeController extends HttpServlet {
 				address=proguard.getAddress();
 				tele=proguard.getTele();
 				
-				response.sendRedirect("Menu_Proveedores.jsp?nit="+num_nit+"&&nom="+name+"&&ciu="+city+"&&dir="+address+"&&tel="+tele);
+				response.sendRedirect("Menu_Proveedores.jsp?nit="+num_nit+"&&ciu="+city+"&&dir="+address+"&&nom="+name+"&&tel="+tele);
 				JOptionPane.showMessageDialog(null, "Proveedor consultado y encontrado");
 			}
 			else
@@ -135,7 +135,7 @@ public class ProveeController extends HttpServlet {
 			address=request.getParameter("direccion");
 			tele=request.getParameter("telefono");
 			
-			prodto= new ProveedoresDTO(nit, name, city, address, tele);
+			prodto= new ProveedoresDTO(nit, city, address, name, tele);
 			prodao= new ProveedoresDAO();
 			dato=prodao.actualizar(prodto);
 			

@@ -9,7 +9,7 @@ public class ProveedoresDTO
 	private String tele;
 	
 	
-	public ProveedoresDTO(int nit, String name, String city, String address, String tele) 
+	public ProveedoresDTO(int nit, String city, String address, String name, String tele) 
 	{
 		super();
 		this.nit = nit;

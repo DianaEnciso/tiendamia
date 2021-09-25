@@ -30,9 +30,9 @@ public class ClientesDAO
 		{
 			ps=cnn.prepareStatement("INSERT INTO clientes VALUES (?,?,?,?,?)");
 			ps.setInt(1, cli.getCedula_clien());
-			ps.setString(2, cli.getNombre_clien());
-			ps.setString(3, cli.getDireccion__clien());
-			ps.setString(4, cli.getEmail_clien());
+			ps.setString(4, cli.getNombre_clien());
+			ps.setString(2, cli.getDireccion__clien());
+			ps.setString(3, cli.getEmail_clien());
 			ps.setString(5, cli.getTelef_clien());
 			x=ps.executeUpdate();
 			

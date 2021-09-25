@@ -68,7 +68,7 @@ public class ClientController extends HttpServlet {
 			}
 			else
 			{
-				clidto= new ClientesDTO(ced, name, direc, email, tele);
+				clidto= new ClientesDTO(ced, direc, email, name, tele);
 				clidao= new ClientesDAO();
 				
 				respu=clidao.insertaruncliente(clidto);
@@ -113,7 +113,7 @@ public class ClientController extends HttpServlet {
 				tele=cliguard.getTelef_clien();
 				
 				
-				response.sendRedirect("Menu_Cliente.jsp?ced="+cedu+"&&nam="+name+"&&dire="+direc+"&&ema="+email+"&&tel="+tele);
+				response.sendRedirect("Menu_Cliente.jsp?ced="+cedu+"&&dire="+direc+"&&ema="+email+"&&nam="+name+"&&tel="+tele);
 				JOptionPane.showMessageDialog(null, "Cliente consultado y encontrado");
 				
 			}
@@ -139,7 +139,7 @@ public class ClientController extends HttpServlet {
 			email=request.getParameter("correo");
 			tele=request.getParameter("telefono");
 			
-			clidto= new ClientesDTO(ced, name, direc, email, tele);
+			clidto= new ClientesDTO(ced, direc, email, name, tele);
 			clidao= new ClientesDAO();
 			dat=clidao.actualizar(clidto);
 			

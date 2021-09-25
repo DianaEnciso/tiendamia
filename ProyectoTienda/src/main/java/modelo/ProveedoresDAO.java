@@ -29,9 +29,9 @@ public class ProveedoresDAO
 		{
 			ps=cnn.prepareStatement("INSERT INTO proveedores VALUES (?,?,?,?,?)");
 			ps.setInt(1, prove.getNit());
-			ps.setString(2, prove.getName());
-			ps.setString(3, prove.getCity());
-			ps.setString(4, prove.getAddress());
+			ps.setString(4, prove.getName());
+			ps.setString(2, prove.getCity());
+			ps.setString(3, prove.getAddress());
 			ps.setString(5, prove.getTele());
 			x=ps.executeUpdate();
 			
@@ -58,7 +58,7 @@ public class ProveedoresDAO
 		
 		try 
 		{
-			ps=cnn.prepareStatement("SELECT * FROM proveedores WHERE nit_proveedor=?");
+			ps=cnn.prepareStatement("SELECT * FROM proveedores WHERE nitproveedor=?");
 			ps.setInt(1, prove.getNit());
 			rs=ps.executeQuery();
 			
@@ -89,10 +89,10 @@ public class ProveedoresDAO
 		
 		try 
 		{
-			ps=cnn.prepareStatement("UPDATE proveedores SET nombre_proveedor=?, ciudad_proveedor=?, direccion_proveedor=?, telefono_proveedor=? WHERE nit_proveedor=?");
-			ps.setString(1, prove.getName());
-			ps.setString(2, prove.getCity());
-			ps.setString(3, prove.getAddress());
+			ps=cnn.prepareStatement("UPDATE proveedores SET ciudad_proveedor=?, direccion_proveedor=?, nombre_proveedor=?, telefono_proveedor=? WHERE nitproveedor=?");
+			ps.setString(3, prove.getName());
+			ps.setString(1, prove.getCity());
+			ps.setString(2, prove.getAddress());
 			ps.setString(4, prove.getTele());
 			ps.setInt(5, prove.getNit() );
 			
@@ -121,7 +121,7 @@ public class ProveedoresDAO
 		
 		try 
 		{
-			ps=cnn.prepareStatement("DELETE FROM proveedores WHERE nit_proveedor=?");
+			ps=cnn.prepareStatement("DELETE FROM proveedores WHERE nitproveedor=?");
 			ps.setInt(1, prove.getNit());
 			x=ps.executeUpdate();
 			

@@ -17,9 +17,11 @@ src:url("../fonts/Roboto-Regular.ttf");
 }
 
 body{
+	
 	background-image: url("../imgs/home_background_Mesa de trabajo 1.png");
 	background-size: cover;
 	font-family: Roboto;
+
 }
 
 .main-nav{
