@@ -179,7 +179,8 @@ body{
 	background-color: #416137fc;
 }
 
-
-
+#sd_prod{
+	justify-content: space-around;
+}
 
 

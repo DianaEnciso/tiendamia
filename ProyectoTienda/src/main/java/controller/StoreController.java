@@ -25,6 +25,7 @@ public class StoreController extends HttpServlet
         
     }
 
+/*
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		//VALIDACION DE LOGIN
@@ -48,7 +49,7 @@ public class StoreController extends HttpServlet
 		}
 	}
 	
-
+*/
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	
 	{

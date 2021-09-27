@@ -33,6 +33,15 @@ public class UsuariosDTO
 
 
 
+	public UsuariosDTO(String password, String usuario) {
+		super();
+		this.password = password;
+		this.usuario = usuario;
+	}
+
+
+
+
 	public int getCedula_usuario() 
 	{
 		return cedula_usuario;

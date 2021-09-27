@@ -46,7 +46,7 @@
 							
 						<img class="logo1" alt="logo" src="imgs/MinFruver_logo_Mesa de trabajo 1.png">
 						
-						<form action="StoreController" method="get">
+						<form action="LoginController" method="post">
 							
 							<div class="info">
 								<label>Usuario</label>

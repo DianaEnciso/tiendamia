@@ -19,10 +19,34 @@ public class UsuariosDAO
 	
 		
 
+//INGRESAR AL SISTEMA POR BD
+public boolean Ingresosistema(UsuariosDTO us) {
+	
+	try {
+		ps = cnn.prepareStatement("SELECT password FROM usuarios WHERE usuario=?");
+		ps.setString(1, us.getUsuario());
+		rs=ps.executeQuery();
+		
+		if(rs.next()) {
+			if(us.getPassword().equals(rs.getString(1))) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+		
+	} catch (SQLException e) {
+		JOptionPane.showMessageDialog(null, "Error al validar el usuario" + e);
+	}
+		
+	return false;
+}
+	
+	
+//INSERTAR UN USUARIO
 public boolean insertarusuario(UsuariosDTO us)
 {
-	
-	//INSERTAR UN USUARIO
 	
 	int x;
 	boolean dato=false;

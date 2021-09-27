@@ -25,12 +25,24 @@
 	   		</div>
 	   		
 	           <ul class="main-nav">
-	               <li class="main-nav__item"><a href="Menu_Usuario.jsp"><img alt="Usuarios" src="imgs/items_Mesa de trabajo 1.png"></a></li>
-	               <li class="main-nav__item"><a href="Menu_Cliente.jsp"><img alt="Clientes" src="imgs/items-02.png"></a></li>
-	               <li class="main-nav__item"><a href="Menu_Proveedores.jsp"><img alt="Proveedores" src="imgs/items-03.png"></a></li>
-	               <li class="main-nav__item"><a href="Menu_Productos.jsp"><img alt="Productos" src="imgs/items-10.png"></a></li>
-	               <li class="main-nav__item"><a href="Menu_Ventas.jsp"><img alt="Ventas" src="imgs/items-05.png"></a></li>
-	               <li class="main-nav__item"><a href="Menu_Reportes.jsp"><img alt="Reportes" src="imgs/items-06.png"></a></li>
+	               <li class="main-nav__item"><a class="tooltip" href="Menu_Usuario.jsp"><img alt="Usuarios" src="imgs/items_Mesa de trabajo 1.png">
+	               <span class="tooltip_box">Usuarios</span>
+	               </a></li>
+	               <li class="main-nav__item"><a class="tooltip" href="Menu_Cliente.jsp"><img alt="Clientes" src="imgs/items-02.png">
+	               <span class="tooltip_box">Clientes</span>
+	               </a></li>
+	               <li class="main-nav__item"><a class="tooltip" href="Menu_Proveedores.jsp"><img alt="Proveedores" src="imgs/items-03.png">
+	               <span class="tooltip_box">Proveedores</span>
+	               </a></li>
+	               <li class="main-nav__item"><a class="tooltip" href="Menu_Productos.jsp"><img alt="Productos" src="imgs/items-10.png">
+	               <span class="tooltip_box">Productos</span>
+	               </a></li>
+	               <li class="main-nav__item"><a class="tooltip" href="Menu_Ventas.jsp"><img alt="Ventas" src="imgs/items-05.png">
+	               <span class="tooltip_box">Ventas</span>
+	               </a></li>
+	               <li class="main-nav__item"><a class="tooltip" href="Menu_Reportes.jsp"><img alt="Reportes" src="imgs/items-06.png">
+	               <span class="tooltip_box">Reportes</span>
+	               </a></li>
 	               <%
 	               String da="";
 	               if(request.getParameter("da") ==null)
@@ -44,23 +56,35 @@
 	   	
 	<div class="formulario">
 <h2>Gestión de productos</h2>
-<form action="ProductosController" method="post" class="userForm">
+<%
+String c="", i="", n="", nom="", pc="", pv="";
+if (request.getParameter("cod")!=null){
+	c=request.getParameter("doc");
+	i=request.getParameter("iva");
+	n=request.getParameter("nit");
+	nom = request.getParameter("nom");
+	pc = request.getParameter("prec_c");
+	pv = request.getParameter("prec_v");
+}
+%>
+
+
+<form action="ProductController" method="post" class="userForm">
 	    	<label for="user-cc">Código del producto</label>
-	    	<input type="text" name="cod" placeholder="Digita el código del producto"  required> 
+	    	<input type="text" name="cod" placeholder="Digita el código del producto"  value="<%=c%>" required> 
 	    	<label for="user-cc">Nombre del producto</label>
-	    	<input type="text" name="nom" placeholder="Digita el nombre del producto"  > 
+	    	<input type="text" name="nom" placeholder="Digita el nombre del producto" value="<%=nom%>" > 
 	    	<label for="user-cc">Nit del proveedor</label>
-	    	<input type="text" name="nit" placeholder="Digita tel NIT del proveedor"  > 
+	    	<input type="text" name="nit" placeholder="Digita tel NIT del proveedor"  value="<%=n%>"> 
 	    	<label for="user-cc">Precio compra</label>
-	    	<input type="text" name="prec_c" placeholder="Digita el precio de compra"  > 
+	    	<input type="text" name="prec_c" placeholder="Digita el precio de compra"  value="<%=pc%>"> 
 	    	<label for="user-cc">IVA compra</label>
-	    	<input type="text" name="iva" placeholder="Digita el IVA"  > 
+	    	<input type="text" name="iva" placeholder="Digita el IVA"  value="<%=i%>"> 
 	    	<label for="user-cc">Precio venta</label>
-	    	<input type="text" name="prec_v" placeholder="Digita el precio de venta"  >  
+	    	<input type="text" name="prec_v" placeholder="Digita el precio de venta" value="<%=pv%>" >  
 	    	<div class="send_data" id="sd_prod">
 		    	<!--<input type="submit" name="btn_crearU" value="Crear">-->
 		    	<input type="submit" name="btn_consPD" value="Consultar">
-		    	<div id="separador"></div>
 		    	<input type="submit" name="btn_actPD" value="Actualizar">
 		    	<!--<input type="submit" name="btn_elimPD" value="Eliminar">-->
 		    
