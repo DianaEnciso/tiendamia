@@ -14,7 +14,7 @@ import modelo.ProductosDTO;
 /**
  * Servlet implementation class ProductCrontroller
  */
-@WebServlet("/ProductCrontroller")
+@WebServlet("/ProductController")
 public class ProductController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -49,7 +49,7 @@ public class ProductController extends HttpServlet {
 		if (request.getParameter("btn_consPD")!=null) {
 			int cod;
 			
-			c=Integer.parseInt(request.getParameter("doc"));
+			c=Integer.parseInt(request.getParameter("cod"));
 			proddto = new ProductosDTO(c);
 			proddao = new ProductosDAO();
 			recoldat = proddao.ConsultarProducto(proddto);
@@ -62,13 +62,13 @@ public class ProductController extends HttpServlet {
 				pc=recoldat.getPre_com();
 				pv=recoldat.getPre_ven();
 
-				response.sendRedirect("productos.jps?=cod="+cod+"&&nom="+n+"&&nit="+n+"&&prec_c="+pc+"&&iva="+i+"prec_v="+pv);
+				response.sendRedirect("Menu_Productos.jsp?cod="+cod+"&&nom="+nom+"&&nit="+n+"&&prec_c="+pc+"&&iva="+i+"&&prec_v="+pv);
 			}
 			else {
 				JOptionPane.showMessageDialog(null, "El producto no se encuentra registrado.");
-				response.sendRedirect("productos.jsp");
+				response.sendRedirect("Menu_Productos.jsp");
 			}
-			
+		}
 			
 			
 		//ACTUALIZAR
@@ -86,31 +86,16 @@ public class ProductController extends HttpServlet {
 			
 			if(res) {
 				JOptionPane.showMessageDialog(null, "Producto actualizado.");
-				response.sendRedirect("productos.jsp");
+				response.sendRedirect("Menu_Productos.jsp");
 			}
 			else {
 				JOptionPane.showMessageDialog(null, "Producto no actualizado.");
-				response.sendRedirect("productos.jsp");
+				response.sendRedirect("Menu_Productos.jsp");
 			}
 			
-					}	
-		
+		}	
 			
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-		}
 	}
-
 }
+

@@ -51,21 +51,20 @@
 	   	</header>
 	   	
 	<div class="formulario">
-<h2>Gestión de productos</h2>
-<%
-String c="", i="", n="", nom="", pc="", pv="";
-if (request.getParameter("cod")!=null){
-	c=request.getParameter("doc");
-	i=request.getParameter("iva");
-	n=request.getParameter("nit");
-	nom = request.getParameter("nom");
-	pc = request.getParameter("prec_c");
-	pv = request.getParameter("prec_v");
-}
-%>
+		<h2>Gestión de productos</h2>
+		<%
+		String c="", i="", n="", nom="", pc="", pv="";
+		if (request.getParameter("cod")!=null){
+			c=request.getParameter("cod");
+			i=request.getParameter("iva");
+			n=request.getParameter("nit");
+			nom = request.getParameter("nom");
+			pc = request.getParameter("prec_c");
+			pv = request.getParameter("prec_v");
+		}
+		%>
 
-
-<form action="ProductController" method="post" class="userForm">
+		<form action="ProductController" method="post" class="userForm">
 	    	<label for="user-cc">Código del producto</label>
 	    	<input type="text" name="cod" placeholder="Digita el código del producto"  value="<%=c%>" required> 
 	    	<label for="user-cc">Nombre del producto</label>
@@ -86,7 +85,7 @@ if (request.getParameter("cod")!=null){
 		    
 		    </div>  	    	
 	    </form>	
-</div>   	
+	</div>   	
        
 	</div>
 

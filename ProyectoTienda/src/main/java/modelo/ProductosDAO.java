@@ -44,7 +44,7 @@ public class ProductosDAO {
 		boolean dato=false;
 		
 			try {
-				ps=cnn.prepareStatement("UPDATE productos SET ivacompra=?, nitproveedor=?, nombre_producto=?, precio_compra=?, precio_venta=?");
+				ps=cnn.prepareStatement("UPDATE productos SET ivacompra=?, nitproveedor=?, nombre_producto=?, precio_compra=?, precio_venta=? WHERE codigo_producto=?");
 				ps.setInt(1, prod.getIva_com());
 				ps.setInt(2, prod.getNit_prov());
 				ps.setString(3, prod.getNom_prod());
