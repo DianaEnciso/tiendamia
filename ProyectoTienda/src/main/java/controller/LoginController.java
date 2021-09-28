@@ -54,6 +54,7 @@ public class LoginController extends HttpServlet {
 			res = usdao.Ingresosistema(usdto);
 			if(res) {
 				JOptionPane.showMessageDialog(null, "Bienvenido al sistema");
+				request.getSession().setAttribute("user", u);
 				response.sendRedirect("home.jsp");
 			}
 			else {

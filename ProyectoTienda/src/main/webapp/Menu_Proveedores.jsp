@@ -45,12 +45,8 @@
 	               <span class="tooltip_box">Reportes</span>
 	               </a></li>
 	               <%
-		        String da="";
-		        if(request.getParameter("da") ==null)
-		        {
-				da=request.getParameter("dato");
-		        }
-				%>
+	               String da = request.getSession().getAttribute("user").toString();
+				   %>
 	            <li class="main-nav__itemU"><a href="index.jsp" class="exit_session"><%=da%></a></li>
 	     	</ul>
 		</header>

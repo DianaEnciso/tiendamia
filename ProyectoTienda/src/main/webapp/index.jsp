@@ -30,7 +30,7 @@
                 <li class="main-nav__item"><a href="Menu_Productos.jsp"><img alt="Productos" src="imgs/items-04.png"></a></li>
                 <li class="main-nav__item"><a href="Menu_Ventas.jsp"><img alt="Ventas" src="imgs/items-05.png"></a></li>
                 <li class="main-nav__item"><a href="Menu_Reportes.jsp"><img alt="Reportes" src="imgs/items-06.png"></a></li>
-                <li class="main-nav__item"><a href="Menu_Usuario.jsp" class="exit_session">Usuario</a></li>
+                <li class="main-nav__itemU"><a href="Menu_Usuario.jsp" class="exit_session">Usuario</a></li>
             </ul>
     	</header>
 
