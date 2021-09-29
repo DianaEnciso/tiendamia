@@ -19,7 +19,7 @@
 	<div class="home">
     	<header class="navbar">    
     		<div class="titulo-logo"> 
-    			<a href="home.jsp"><img alt="Logo minfruver" src="imgs/MinFruver_logo_Mesa de trabajo 1.png" class="logo"></a>
+    			<a href="home.jsp"><img alt="Logo minfruver" src="imgs/logo-02.png" class="logo"></a>
     		</div>
     		
             <ul class="main-nav">
@@ -51,7 +51,7 @@
     	<h1 class="msj_welcome">Bienvenido a MinFruver.</h1> 
 	 	<p class="p_welcome">La plaza de mercado digital al alcance de tu mano</p>
 	 	
-	 	<!-- <div class="footer">
+	 	<div class="footer footer_home">
 	    	<div class="logoFooter">
 	    		<img alt="logo" src="imgs/logo-misiontic.png" width="100px">
 	    	</div>
@@ -77,7 +77,7 @@
 		    		<p><small>Copyright &copy 2021, all rights reserved</small></p>
 		    	</div>
 	    	</div>
-	    </div> -->
+	    </div>
    
 	</div>
 
