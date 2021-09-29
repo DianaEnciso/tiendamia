@@ -18,6 +18,7 @@ src:url("../fonts/Roboto-Regular.ttf");
 
 .cliente {
 	background-image: url("../imgs/background_clientes.jpg");
-	background-size: cover;
-	height: 100vh;
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 90vh;
 }

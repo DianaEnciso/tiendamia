@@ -50,6 +50,34 @@
     	
     	<h1 class="msj_welcome">Bienvenido a MinFruver.</h1> 
 	 	<p class="p_welcome">La plaza de mercado digital al alcance de tu mano</p>
+	 	
+	 	<div class="footer">
+	    	<div class="logoFooter">
+	    		<img alt="logo" src="imgs/logo-misiontic.png" width="100px">
+	    	</div>
+	    	
+	    	<div class="logo-universidad"> 
+	    		<img alt="Logo minfruver" src="imgs/logo-universidad.png" width="100px"></a>
+	    	</div>
+	    
+	    	<div class="description">
+	    		<p style="text-align: center; border-bottom: 1px solid #ffffff;"><b>MisionTic - Universidad del Bosque 2021</b></p> 
+	    		<p style="padding: 5px 0 0 0"><b>Nuestra meta: </b>Enfrentar los desafios de la cuarta Revolución Industrial.</p>
+	    		<p><b>Autores: </b>Diana Enciso, Lina Pérez, Evelyn Perozo, Diego Ramírez</p>
+	    	</div>
+	    
+	    	<div class="InfoGeneral">
+		    	<p>Siguenos en nuestras redes sociales</p>
+		    	<div class="redesSociales">
+			    	<a><img alt="Facebook" src="imgs/facebook.svg"></a>
+			    	<a><img alt="Instagram" src="imgs/instagram.svg"></a>
+			    	<a><img alt="Twitter" src="imgs/twitter.svg"></a>
+		    	</div>
+		    	<div class="copyright">
+		    		<p><small>Copyright &copy 2021, all rights reserved</small></p>
+		    	</div>
+	    	</div>
+	    </div>
    
 	</div>
 
