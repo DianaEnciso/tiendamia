@@ -183,4 +183,43 @@ body{
 	justify-content: space-around;
 }
 
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #0C331B;
+	height: 12vh;
+	margin: 15px 0 0 0;
+	padding: 10px;
+	bottom: 0;
+}
+
+.description {
+	width: 24%;
+	color: #ffffff;
+	padding: 3px 0;
+} 
+
+.infoGeneral {
+	width: 24%;
+}
+
+.footer p {
+	color: #ffffff;
+}
+
+.redesSociales a {
+	cursor: pointer;
+	padding: 0 15px;
+}
+
+.redesSociales {
+	padding: 5px 0;
+}
+
+
+.redesSociales img {
+	width: 30px;
+}
+
 

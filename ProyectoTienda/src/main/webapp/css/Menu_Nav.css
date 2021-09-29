@@ -20,7 +20,7 @@ src:url("../fonts/Roboto-Regular.ttf");
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1px;
+	padding: 45px;
 }
 
 .titulo-logo {

@@ -18,8 +18,9 @@ src:url("../fonts/Roboto-Regular.ttf");
 
 .proveedor {
 	background-image: url("../imgs/background_proveedores.jpg");
-	background-size: cover;
-	height: 100vh;
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 90vh;
 }
 
 
