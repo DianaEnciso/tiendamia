@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Menu Clientes</title>
+<title>Gestión de clientes</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/Menu_Nav.css">
 <link rel="stylesheet" href="css/cliente.css">
@@ -52,7 +52,7 @@
         
 		<div class="formulario">
 
-    		<h2>Bienvenido Cliente</h2>
+    		<h2>Gestión de clientes</h2>
 			<%
 				String ced="",name="",direc="",email="",tele="";
 				

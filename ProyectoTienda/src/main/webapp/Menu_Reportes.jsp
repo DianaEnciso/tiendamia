@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Menu Reporte</title>
+<title>Consultas y reportes</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/Menu_Nav.css">
 <link rel="stylesheet" href="css/reporte.css">
@@ -53,7 +53,7 @@
 	   	</header>
 	   	
 	   	<div class="formulario">
-	   		<h2>Bienvenido al Menu de Reportes</h2>
+	   		<h2>Consultas y reportes</h2>
 	   	</div>
 	   	
 	   	<!-- <div class="footer">
