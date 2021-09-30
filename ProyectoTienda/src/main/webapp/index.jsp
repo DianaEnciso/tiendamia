@@ -30,7 +30,7 @@
                 <li class="main-nav__item"><a href="Menu_Productos.jsp"><img alt="Productos" src="imgs/items-04.png"></a></li>
                 <li class="main-nav__item"><a href="Menu_Ventas.jsp"><img alt="Ventas" src="imgs/items-05.png"></a></li>
                 <li class="main-nav__item"><a href="Menu_Reportes.jsp"><img alt="Reportes" src="imgs/items-06.png"></a></li>
-                <li class="main-nav__item"><a href="Menu_Usuario.jsp" class="exit_session">Usuario</a></li>
+                <li class="main-nav__itemU"><a href="Menu_Usuario.jsp" class="exit_session">Usuario</a></li>
             </ul>
     	</header>
 
@@ -67,6 +67,34 @@
 			</div>
 
 		</main>	
+		
+		<div class="footer footer_index">
+	    	<div class="logoFooter">
+	    		<img alt="logo" src="imgs/logo-misiontic.png" width="100px">
+	    	</div>
+	    	
+	    	<div class="logo-universidad"> 
+	    		<img alt="Logo minfruver" src="imgs/logo-universidad.png" width="100px"></a>
+	    	</div>
+	    
+	    	<div class="description">
+	    		<p style="text-align: center; border-bottom: 1px solid #ffffff;"><b>MisionTic - Universidad del Bosque 2021</b></p> 
+	    		<p style="padding: 5px 0 0 0"><b>Nuestra meta: </b>Enfrentar los desafios de la cuarta Revolución Industrial.</p>
+	    		<p><b>Autores: </b>Diana Enciso, Lina Pérez, Evelyn Perozo, Diego Ramírez</p>
+	    	</div>
+	    
+	    	<div class="InfoGeneral">
+		    	<p>Siguenos en nuestras redes sociales</p>
+		    	<div class="redesSociales">
+			    	<a><img alt="Facebook" src="imgs/facebook.svg"></a>
+			    	<a><img alt="Instagram" src="imgs/instagram.svg"></a>
+			    	<a><img alt="Twitter" src="imgs/twitter.svg"></a>
+		    	</div>
+		    	<div class="copyright">
+		    		<p><small>Copyright &copy 2021, all rights reserved</small></p>
+		    	</div>
+	    	</div>
+	    </div>
 	
 	</div>
 
