@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Home Store</title>
+<title>MinFruver</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/Menu_Nav.css">
 </head>
@@ -48,7 +48,7 @@
             </ul>
     	</header>
     	
-    	<h1 class="msj_welcome">Bienvenido a MinFruver.</h1> 
+    	<h1 class="msj_welcome">Bienvenido a MinFruver</h1> 
 	 	<p class="p_welcome">La plaza de mercado digital al alcance de tu mano</p>
 	 	
 	 	<div class="footer footer_home">

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Menu Ventas</title>
+<title>Gestión de ventas</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/Menu_Nav.css">
 <link rel="stylesheet" href="css/venta.css">
@@ -52,7 +52,12 @@
 	   	</header>
 	   	
 	   	<div class="formulario">
+<<<<<<< HEAD
 	   		<h2>Bienvenido al Menú de Ventas</h2>
+=======
+	   		<h2>Gestión de ventas</h2>
+	   	</div>
+>>>>>>> branch 'master' of https://github.com/DianaEnciso/tiendamia.git
 	   	
 		    	<div class="send_data" id="sd_prod">
 		    	
