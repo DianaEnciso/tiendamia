@@ -52,9 +52,18 @@
 	   	</header>
 	   	
 	   	<div class="formulario">
-	   		<h2>Bienvenido al Menu de Ventas</h2>
-	   	</div>
+	   		<h2>Bienvenido al Menú de Ventas</h2>
 	   	
+		    	<div class="send_data" id="sd_prod">
+		    	
+			    	<!--<input type="submit" name="btn_crearU" value="Crear">-->
+			    	<input type="submit" name="btn_consPD" value="Consultar">
+			    	<input type="submit" name="btn_actPD" value="Actualizar">
+			    	<!--<input type="submit" name="btn_elimPD" value="Eliminar">-->
+			    
+			    </div>  	    	
+		    </form>	
+		</div>  -->
 	   	<!-- <div class="footer">
 	    	<div class="logoFooter">
 	    		<img alt="logo" src="imgs/logo-misiontic.png" width="100px">
