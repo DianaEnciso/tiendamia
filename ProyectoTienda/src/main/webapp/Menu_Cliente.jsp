@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Menu Clientes</title>
+<title>Gestión de clientes</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/Menu_Nav.css">
 <link rel="stylesheet" href="css/cliente.css">
@@ -52,7 +52,7 @@
         
 		<div class="formulario">
 
-    		<h2>Bienvenido Cliente</h2>
+    		<h2>Gestión de clientes</h2>
 			<%
 				String ced="",name="",direc="",email="",tele="";
 				
@@ -100,8 +100,8 @@
 	    
 	    	<div class="description">
 	    		<p style="text-align: center; border-bottom: 1px solid #ffffff;"><b>MisionTic - Universidad del Bosque 2021</b></p> 
-	    		<p style="padding: 5px 0 0 0"><b>Nuestra meta: </b>Enfrentar los desafios de la cuarta Revolución Industrial.</p>
-	    		<p><b>Autores: </b>Diana Enciso, Lina Pérez, Evelyn Perozo, Diego Ramírez</p>
+	    		<p style="padding: 5px 0 0 0"><b>Nuestra meta: </b>Enfrentar los desafíos de la cuarta Revolución Industrial.</p>
+	    		<p><b>Autores: </b>Lina Pérez, Evelyn Perozo, Diego Ramírez, Diana Rodríguez</p>
 	    			    		
 	    	</div>
 	    
@@ -113,7 +113,7 @@
 			    	<a><img alt="Twitter" src="imgs/twitter.svg"></a>
 		    	</div>
 		    	<div class="copyright">
-		    		<p><small>Copyright &copy 2021, all rights reserved</small></p>
+		    		<p><small>Copyright &copy 2021. All Rights Reserved</small></p>
 		    	</div>
 	    	</div>
 	    </div>

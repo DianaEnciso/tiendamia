@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Home Store</title>
+<title>MinFruver</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/Menu_Nav.css">
 </head>
@@ -19,7 +19,7 @@
 	<div class="home">
     	<header class="navbar">    
     		<div class="titulo-logo"> 
-    			<a href="home.jsp"><img alt="Logo minfruver" src="imgs/MinFruver_logo_Mesa de trabajo 1.png" class="logo"></a>
+    			<a href="home.jsp"><img alt="Logo minfruver" src="imgs/logo-02.png" class="logo"></a>
     		</div>
     		
             <ul class="main-nav">
@@ -48,10 +48,10 @@
             </ul>
     	</header>
     	
-    	<h1 class="msj_welcome">Bienvenido a MinFruver.</h1> 
+    	<h1 class="msj_welcome">Bienvenido a MinFruver</h1> 
 	 	<p class="p_welcome">La plaza de mercado digital al alcance de tu mano</p>
 	 	
-	 	<div class="footer">
+	 	<div class="footer footer_home">
 	    	<div class="logoFooter">
 	    		<img alt="logo" src="imgs/logo-misiontic.png" width="100px">
 	    	</div>
@@ -62,8 +62,8 @@
 	    
 	    	<div class="description">
 	    		<p style="text-align: center; border-bottom: 1px solid #ffffff;"><b>MisionTic - Universidad del Bosque 2021</b></p> 
-	    		<p style="padding: 5px 0 0 0"><b>Nuestra meta: </b>Enfrentar los desafios de la cuarta Revolución Industrial.</p>
-	    		<p><b>Autores: </b>Diana Enciso, Lina Pérez, Evelyn Perozo, Diego Ramírez</p>
+	    		<p style="padding: 5px 0 0 0"><b>Nuestra meta: </b>Enfrentar los desafíos de la cuarta Revolución Industrial.</p>
+	    		<p><b>Autores: </b>Lina Pérez, Evelyn Perozo, Diego Ramírez, Diana Rodríguez</p>
 	    	</div>
 	    
 	    	<div class="InfoGeneral">
@@ -74,7 +74,7 @@
 			    	<a><img alt="Twitter" src="imgs/twitter.svg"></a>
 		    	</div>
 		    	<div class="copyright">
-		    		<p><small>Copyright &copy 2021, all rights reserved</small></p>
+		    		<p><small>Copyright &copy 2021. All Rights Reserved</small></p>
 		    	</div>
 	    	</div>
 	    </div>

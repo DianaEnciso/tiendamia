@@ -61,7 +61,9 @@ public class ProductController extends HttpServlet {
 				nom=recoldat.getNom_prod();
 				pc=recoldat.getPre_com();
 				pv=recoldat.getPre_ven();
-
+				
+				
+				
 				response.sendRedirect("Menu_Productos.jsp?cod="+cod+"&&nom="+nom+"&&nit="+n+"&&prec_c="+pc+"&&iva="+i+"&&prec_v="+pv);
 			}
 			else {

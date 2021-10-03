@@ -22,7 +22,8 @@ body{
 
 .home {
 	background-image: url("../imgs/home_background_Mesa de trabajo 1.png");
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
 	height: 100vh;
 }
 
@@ -192,6 +193,14 @@ body{
 	margin: 15px 0 0 0;
 	padding: 10px;
 	bottom: 0;
+}
+
+.footer_home {
+	margin-top: 300px;
+}
+
+.footer_index {
+	margin-top: 350px;
 }
 
 .description {
