@@ -51,52 +51,108 @@
             </ul>
 	   	</header>
 	   	
-	   	<div class="formulario">
-<<<<<<< HEAD
-	   		<h2>Bienvenido al Menú de Ventas</h2>
-=======
-	   		<h2>Gestión de ventas</h2>
-	   	</div>
->>>>>>> branch 'master' of https://github.com/DianaEnciso/tiendamia.git
+	   	<div class="formulario1">
 	   	
-		    	<div class="send_data" id="sd_prod">
+	   		<h2>Perfil de ventas</h2>
+	   		
+	   		 <form action="ProductController" method="post" class="userForm1">
+		    	<div class="consultClient">
+		    		<div>
+			    		<label for="cedula">Cédula</label>
+			    		<div class="consult_cedula">
+				    		<input type="text" id="cedula" name="">
+				    		<input type="submit" value="Consultar" name="">
+			    		</div>
+		    		</div>
+		    		<div>
+			    		<label for="cliente">Cliente</label>
+			    		<input type="text" id="cliente">
+		    		</div>
+		    		<div>
+			    		<label for="consecutivo">Consecutivo</label>
+			    		<input type="text" id="consecutivo"> 
+		    		</div>  	
+		    	</div>
 		    	
-			    	<!--<input type="submit" name="btn_crearU" value="Crear">-->
-			    	<input type="submit" name="btn_consPD" value="Consultar">
-			    	<input type="submit" name="btn_actPD" value="Actualizar">
-			    	<!--<input type="submit" name="btn_elimPD" value="Eliminar">-->
-			    
-			    </div>  	    	
-		    </form>	
-		</div>  -->
-	   	<!-- <div class="footer">
+		    	<div class="productConsult">
+		    		<table class="table_form">
+			    		<tr>
+			    			<th colspan="2">Código producto</th>
+			    			<th>Nombre producto</th>
+			    			<th>Cantidad</th>
+			    			<th>Valor total</th>		    		
+			    		</tr>
+			    		<tr>
+			    			<td><input type="text" name="" placeholder="Producto # 1"></td>
+			    			<td><input type="submit" value="consultar" name=""></td>
+			    			<td><input type="text" name=""></td>
+			    			<td><input type="text" name=""></td>
+			    			<td><input type="text" name=""></td>   		
+			    		</tr>
+			    		<tr>
+			    			<td><input type="text" name="" placeholder="Producto # 2"></td>
+			    			<td><input type="submit" value="consultar" name=""></td>
+			    			<td><input type="text" name=""></td>
+			    			<td><input type="text" name=""></td>
+			    			<td><input type="text" name=""></td>   		
+			    		</tr>
+			    		<tr>
+			    			<td><input type="text" name="" placeholder="Producto # 3"></td>
+			    			<td><input type="submit" value="consultar" name=""></td>
+			    			<td><input type="text" name=""></td>
+			    			<td><input type="text" name=""></td>
+			    			<td><input type="text" name=""></td>   		
+			    		</tr>
+			    		<tr>
+			    			<td colspan="4" style="text-align: center; font-weight: bold;">Total valor de Venta</td>
+			    			<td><input type="text" name=""></td>	    			
+			    		</tr>
+			    		<tr>
+			    			<td colspan="4" style="text-align: center; font-weight: bold;">Total IVA</td>
+			    			<td><input type="text" name=""></td>	    			
+			    		</tr>
+			    		<tr>
+			    			<td colspan="4" style="text-align: center; font-weight: bold;">Total con IVA</td>
+			    			<td><input type="text" name=""></td>	    			
+			    		</tr>
+			    		<tr class="submit_info_venta">
+			    			<td colspan="5"><input type="submit" value="Enviar información" name="" class="send_info_ventas"></td>
+			    		</tr>
+		   
+		    		</table>		    		
+		    		
+		    		<input type="hidden" name="cedUsu" value="${vs.getCedula_usuario()}">
+		    	</div>
+		    </form>
+	   	</div>
+	   	
+	   	<div class="footer">
 	    	<div class="logoFooter">
-	    		<img alt="logo" src="imgs/logo-misiontic.png" width="100px">
+	    		<a href="https://misionticueb.myopenlms.net/" target="_blank"><img alt="logo" src="imgs/logo-misiontic.png" width="100px"></a>
 	    	</div>
 	    	
 	    	<div class="logo-universidad"> 
-	    		<img alt="Logo minfruver" src="imgs/logo-universidad.png" width="100px"></a>
+	    		<a href="https://www.unbosque.edu.co/" target="_blank"><img alt="Logo minfruver" src="imgs/logo-universidad.png" width="100px"></a>
 	    	</div>
 	    
 	    	<div class="description">
-	    		<p style="text-align: center; border-bottom: 1px solid #ffffff;"><b>MisionTic - Universidad del Bosque 2021</b></p> 
+	    		<p class="description-footer" style="text-align: center; border-bottom: 1px solid #ffffff;"><b>MisionTic - Universidad del Bosque 2021</b></p> 
 	    		<p style="padding: 5px 0 0 0"><b>Nuestra meta: </b>Enfrentar los desafíos de la cuarta Revolución Industrial.</p>
-	    		<p><b>Autores: </b>Lina Pérez, Evelyn Perozo, Diego Ramírez, Diana Rodríguez</p>
-	    			    		
+	    		<p><b>Autores: </b>Lina María Pérez, Evelyn Perozo, Diego Ramírez, Diana Rodríguez</p>
 	    	</div>
 	    
 	    	<div class="InfoGeneral">
 		    	<p>Siguenos en nuestras redes sociales</p>
 		    	<div class="redesSociales">
-			    	<a><img alt="Facebook" src="imgs/facebook.svg"></a>
-			    	<a><img alt="Instagram" src="imgs/instagram.svg"></a>
-			    	<a><img alt="Twitter" src="imgs/twitter.svg"></a>
+			    	<a href="#"><img alt="Facebook" src="imgs/facebook.svg"></a>
+			    	<a href="#"><img alt="Instagram" src="imgs/instagram.svg"></a>
+			    	<a href="#"><img alt="Twitter" src="imgs/twitter.svg"></a>
 		    	</div>
 		    	<div class="copyright">
 		    		<p><small>Copyright &copy 2021. All Rights Reserved</small></p>
 		    	</div>
 	    	</div>
-	    </div> -->
+	    </div> 
 	   	
 	</div>
 

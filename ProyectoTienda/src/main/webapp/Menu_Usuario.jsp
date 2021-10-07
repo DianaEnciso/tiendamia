@@ -91,25 +91,25 @@
 		
 		<div class="footer">
 	    	<div class="logoFooter">
-	    		<img alt="logo" src="imgs/logo-misiontic.png" width="100px">
+	    		<a href="https://misionticueb.myopenlms.net/" target="_blank"><img alt="logo" src="imgs/logo-misiontic.png" width="100px"></a>
 	    	</div>
 	    	
 	    	<div class="logo-universidad"> 
-	    		<img alt="Logo minfruver" src="imgs/logo-universidad.png" width="100px"></a>
+	    		<a href="https://www.unbosque.edu.co/" target="_blank"><img alt="Logo minfruver" src="imgs/logo-universidad.png" width="100px"></a>
 	    	</div>
 	    
 	    	<div class="description">
-	    		<p style="text-align: center; border-bottom: 1px solid #ffffff;"><b>MisionTic - Universidad del Bosque 2021</b></p> 
+	    		<p class="description-footer" style="text-align: center; border-bottom: 1px solid #ffffff;"><b>MisionTic - Universidad del Bosque 2021</b></p> 
 	    		<p style="padding: 5px 0 0 0"><b>Nuestra meta: </b>Enfrentar los desafíos de la cuarta Revolución Industrial.</p>
-	    		<p><b>Autores: </b>Lina Pérez, Evelyn Perozo, Diego Ramírez, Diana Rodríguez</p>
+	    		<p><b>Autores: </b>Lina María Pérez, Evelyn Perozo, Diego Ramírez, Diana Rodríguez</p>
 	    	</div>
 	    
 	    	<div class="InfoGeneral">
 		    	<p>Siguenos en nuestras redes sociales</p>
 		    	<div class="redesSociales">
-			    	<a><img alt="Facebook" src="imgs/facebook.svg"></a>
-			    	<a><img alt="Instagram" src="imgs/instagram.svg"></a>
-			    	<a><img alt="Twitter" src="imgs/twitter.svg"></a>
+			    	<a href="#"><img alt="Facebook" src="imgs/facebook.svg"></a>
+			    	<a href="#"><img alt="Instagram" src="imgs/instagram.svg"></a>
+			    	<a href="#"><img alt="Twitter" src="imgs/twitter.svg"></a>
 		    	</div>
 		    	<div class="copyright">
 		    		<p><small>Copyright &copy 2021. All Rights Reserved</small></p>

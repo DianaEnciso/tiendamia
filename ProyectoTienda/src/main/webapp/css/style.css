@@ -21,7 +21,7 @@ body{
 }
 
 .home {
-	background-image: url("../imgs/home_background_Mesa de trabajo 1.png");
+	background-image: url("../imgs/background_home.jpg");
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 100vh;
@@ -134,6 +134,7 @@ body{
 	flex-direction: column;
 	align-items: flex-end;
 	margin: 0 150px 0 0;
+	min-height: 450px;
 }
 
 .formulario h2 {
@@ -191,7 +192,7 @@ body{
 	background-color: #0C331B;
 	height: 12vh;
 	margin: 15px 0 0 0;
-	padding: 10px;
+	padding: 20px 0;
 	bottom: 0;
 }
 
@@ -209,12 +210,23 @@ body{
 	padding: 3px 0;
 } 
 
-.infoGeneral {
-	width: 24%;
+.InfoGeneral {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .footer p {
 	color: #ffffff;
+}
+
+.description-footer {
+	margin-bottom: 10px;
+}
+
+.rederSociales {
+	margin: 0 20px;
 }
 
 .redesSociales a {
@@ -225,7 +237,6 @@ body{
 .redesSociales {
 	padding: 5px 0;
 }
-
 
 .redesSociales img {
 	width: 30px;
