@@ -82,7 +82,8 @@
 			    	<input type="submit" name="btn_actPD" value="Actualizar">
 			    </div>  	        
 		     </form>	
-		    <form action= "ProductController" method="post" enctype="multipart/form-data"> 
+		    <form action= "ProductController" method="post" enctype="multipart/form-data" class="cargar_prod"> 
+				<h3>Carga inicial</h3>
 				<input type="file" name="archivo" value="" accept=".csv"> 
 				<input type="submit" name="subircsv" value="Subir archivo">
 			</form>	

@@ -22,3 +22,32 @@ src:url("../fonts/Roboto-Regular.ttf");
 	background-repeat: no-repeat;
 	height: 90vh;
 }
+
+.cargar_prod {
+	margin: 15px 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.cargar_prod h3 {
+	color: #448755;
+	font-weight: bold;
+	text-align: center !important;	
+}
+
+.cargar_prod input {
+	margin: 10px 0 0 0;
+}
+
+.cargar_prod input[type=submit] {
+	padding: 8px 10px;
+	border-radius: 5px;
+	border-style: none;
+	cursor: pointer;
+	background-color: #6c965efc;
+	color: white;
+}
+
+.cargar_prod input[type=submit]:hover  {
+	background-color: #416137fc;
+}
