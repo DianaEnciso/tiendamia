@@ -69,10 +69,21 @@ public class StoreController extends HttpServlet
 		if(request.getParameter("btning")!=null)
 		{
 			ced=Integer.parseInt(request.getParameter("cedula"));
-			corr=request.getParameter("correo");
-			name=request.getParameter("nombre");
-			pass=request.getParameter("clave");
-			usu=request.getParameter("usuario");
+			usudto= new UsuariosDTO(ced);
+			usudao= new UsuariosDAO();
+			
+			if(usudto.getCedula_usuario()==ced)
+			{
+				JOptionPane.showMessageDialog(null, "Usuario ya registrado");
+				response.sendRedirect("Menu_Usuario.jsp");
+				
+			}else
+			{
+				corr=request.getParameter("correo");
+				name=request.getParameter("nombre");
+				pass=request.getParameter("clave");
+				usu=request.getParameter("usuario");
+				
 			
 			if(corr.equals("") || name.equals("") || pass.equals("") || usu.equals(""))
 			{
@@ -84,7 +95,6 @@ public class StoreController extends HttpServlet
 			{
 				usudto= new UsuariosDTO(ced, corr, name, pass, usu);
 				usudao= new UsuariosDAO();
-				
 				respu=usudao.insertarusuario(usudto);
 				
 				if(respu==true)
@@ -102,7 +112,7 @@ public class StoreController extends HttpServlet
 			}
 		}
 			
-		
+	}		
 		
 		
 		//CONSULTAR UN USUARIO
