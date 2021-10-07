@@ -17,7 +17,7 @@ src:url("../fonts/Roboto-Regular.ttf");
 }
 
 .usuario {
-	background-image: url("../imgs/background_usuario.jpg");
+	background-image: url("../imgs/background_usuarios.jpg");
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 90vh;
