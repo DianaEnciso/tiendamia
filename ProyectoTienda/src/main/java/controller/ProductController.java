@@ -1,11 +1,17 @@
 package controller;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import javax.swing.JOptionPane;
 
 import modelo.ProductosDAO;
@@ -15,6 +21,8 @@ import modelo.ProductosDTO;
  * Servlet implementation class ProductCrontroller
  */
 @WebServlet("/ProductController")
+@MultipartConfig
+
 public class ProductController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -71,8 +79,7 @@ public class ProductController extends HttpServlet {
 				response.sendRedirect("Menu_Productos.jsp");
 			}
 		}
-			
-			
+					
 		//ACTUALIZAR
 		if(request.getParameter("btn_actPD")!=null) {
 			c=Integer.parseInt(request.getParameter("cod"));
@@ -97,7 +104,41 @@ public class ProductController extends HttpServlet {
 			
 		}	
 			
+		Part archivo= request.getPart("archivo");
+		String Url="C:\\\\\\\\Users\\\\\\\\User\\\\\\\\git\\\\\\\\tiendamia\\\\\\\\ProyectoTienda\\\\\\\\src\\\\\\\\main\\\\\\\\webapp\\\\\\\\documentos\\\\\\\\";
+					
+		if(request.getParameter("subircsv")!=null) {
+			JOptionPane.showMessageDialog(null, "cargar oprimido");
+			try {
 			
+			InputStream file= archivo.getInputStream();
+			File copia=new File(Url+"listaProductos.csv");
+			FileOutputStream escribir=new FileOutputStream(copia);
+			int num = file.read();
+			while(num != -1) {
+				escribir.write(num);
+				num= file.read();
+			}
+			file.close();
+			escribir.close();
+			
+			boolean x;
+			JOptionPane.showMessageDialog(null, "se cargó el archivo correctamente");
+			
+			ProductosDAO prodao = new ProductosDAO();
+			x=prodao.cargarCSV(Url + "listaProductos.csv");
+			
+			if(x) {
+				JOptionPane.showMessageDialog(null, "Datos cargados en la bd");				
+			} else {
+				JOptionPane.showMessageDialog(null, "No se cargaron los datos");
+			}
+			}
+			catch(Exception e) {
+				JOptionPane.showMessageDialog(null, "error al cargar el archivo " +e);
+			}
+			response.sendRedirect("Menu_Productos.jsp");	
+			}	
 	}
 }
 

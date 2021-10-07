@@ -63,8 +63,8 @@
 				pv = request.getParameter("prec_v");
 			}
 			%>
-	
-			<form action="ProductController" method="post" class="userForm">
+			
+			<form action="ProductController" method="post" class="userForm" enctype="multipart/form-data">
 		    	<label for="user-cc">Código del producto</label>
 		    	<input type="text" name="cod" placeholder="Digita el código del producto"  value="<%=c%>" required> 
 		    	<label for="user-cc">Nombre del producto</label>
@@ -78,13 +78,15 @@
 		    	<label for="user-cc">Precio venta</label>
 		    	<input type="text" name="prec_v" placeholder="Digita el precio de venta" value="<%=pv%>" >  
 		    	<div class="send_data" id="sd_prod">
-			    	<!--<input type="submit" name="btn_crearU" value="Crear">-->
 			    	<input type="submit" name="btn_consPD" value="Consultar">
 			    	<input type="submit" name="btn_actPD" value="Actualizar">
-			    	<!--<input type="submit" name="btn_elimPD" value="Eliminar">-->
+			    </div>  	        
+		     </form>	
+		    <form action= "ProductController" method="post" enctype="multipart/form-data"> 
+				<input type="file" name="archivo" value="" accept=".csv"> 
+				<input type="submit" name="subircsv" value="Subir archivo">
+			</form>	
 			    
-			    </div>  	    	
-		    </form>	
 		</div> 
 		
 		<div class="footer">
