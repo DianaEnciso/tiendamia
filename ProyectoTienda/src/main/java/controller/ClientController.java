@@ -55,10 +55,21 @@ public class ClientController extends HttpServlet {
 		if(request.getParameter("btning")!=null)
 		{
 			ced=Integer.parseInt(request.getParameter("cedula"));
-			name=request.getParameter("nombre");
-			direc=request.getParameter("direccion");
-			email=request.getParameter("correo");
-			tele=request.getParameter("telefono");
+			clidto= new ClientesDTO(ced);
+			clidao= new ClientesDAO();
+			
+			if(clidto.getCedula_clien()==ced)
+			{
+				JOptionPane.showMessageDialog(null, "Cliente ya registrado");
+				response.sendRedirect("Menu_Cliente.jsp");
+				
+			}else
+			{
+				name=request.getParameter("nombre");
+				direc=request.getParameter("direccion");
+				email=request.getParameter("correo");
+				tele=request.getParameter("telefono");
+			
 			
 			
 			if(name.equals("") || direc.equals("") || email.equals("") || tele.equals(""))
@@ -70,7 +81,6 @@ public class ClientController extends HttpServlet {
 			{
 				clidto= new ClientesDTO(ced, direc, email, name, tele);
 				clidao= new ClientesDAO();
-				
 				respu=clidao.insertaruncliente(clidto);
 				
 				if(respu==true)
@@ -88,9 +98,9 @@ public class ClientController extends HttpServlet {
 			}
 				
 				
-			}
-			
-		
+		}
+	
+	}	
 		
 		//CONSULTAR UN CLIENTE
 		

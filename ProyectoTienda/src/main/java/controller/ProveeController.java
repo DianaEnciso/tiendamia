@@ -56,10 +56,21 @@ public class ProveeController extends HttpServlet {
 		if(request.getParameter("btning")!=null)
 		{
 			nit=Integer.parseInt(request.getParameter("nit"));
-			name=request.getParameter("nombre");
-			city=request.getParameter("ciudad");
-			address=request.getParameter("direccion");
-			tele=request.getParameter("telefono");
+			prodto= new ProveedoresDTO(nit);
+			prodao= new ProveedoresDAO();
+			
+			if(prodto.getNit()==nit)
+			{
+				JOptionPane.showMessageDialog(null, "Proveedor ya registrado");
+				response.sendRedirect("Menu_Proveedores.jsp");
+				
+			}else
+			{
+				name=request.getParameter("nombre");
+				city=request.getParameter("ciudad");
+				address=request.getParameter("direccion");
+				tele=request.getParameter("telefono");
+			
 			
 			
 			if(name.equals("") || city.equals("") || address.equals("") || tele.equals(""))
@@ -87,7 +98,7 @@ public class ProveeController extends HttpServlet {
 				}
 			}
 		}
-			
+	}		
 	
 		
 		//CONSULTAR PROVEEDOR
