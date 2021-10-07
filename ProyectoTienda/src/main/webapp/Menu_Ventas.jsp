@@ -70,7 +70,7 @@
 		    		</div>
 		    		<div>
 			    		<label for="consecutivo">Consecutivo</label>
-			    		<input type="text" id="consecutivo"> 
+			    		<input type="text" id="consecutivo" value="${consecutivo}"> 
 		    		</div>  	
 		    	</div>
 		    	
@@ -121,7 +121,8 @@
 		   
 		    		</table>		    		
 		    		
-		    		<input type="hidden" name="cedUsu" value="${vs.getCedula_usuario()}">
+		    		<input type="text" name="cedUsu" value="${usuario.getCedula_usuario()}">
+		    		<input type="text" name="cedUsu" value="${usuario.getNombre_usuario()}">
 		    	</div>
 		    </form>
 	   	</div>
