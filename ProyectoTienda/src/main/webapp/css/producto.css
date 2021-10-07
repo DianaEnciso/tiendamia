@@ -27,12 +27,13 @@ src:url("../fonts/Roboto-Regular.ttf");
 	margin: 15px 0;
 	display: flex;
 	flex-direction: column;
+	align-items: start;
 }
 
 .cargar_prod h3 {
 	color: #448755;
 	font-weight: bold;
-	text-align: center !important;	
+	text-align: center;	
 }
 
 .cargar_prod input {
