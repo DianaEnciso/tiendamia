@@ -35,6 +35,28 @@ public class VentasDAO {
 	
 	
 	
+	public boolean RegistrarVenta(VentasDTO ven) {
+		int x;
+		boolean res = false;
+		
+		try {
+			ps=cnn.prepareStatement("INSERT INTO ventas(cedula_cliente, cedula_usuario, ivaventa, total_venta, valor_venta) VALUE (?,?,?,?,?)");
+			ps.setInt(1, ven.getCedula_cliente());
+			ps.setInt(2, ven.getCedula_usuario());
+			ps.setDouble(3, ven.getIva_venta());
+			ps.setDouble(4, ven.getTotal_venta());
+			ps.setDouble(5, ven.getTotal_venta());
+			x=ps.executeUpdate();
+			
+			if (x>0) {
+				res=false;
+			}
+					
+		} catch (SQLException e) {
+			JOptionPane.showMessageDialog(null,"Error al registrar la venta" + e);
+		}
+		return res;		
+	}
 	
 	
 	

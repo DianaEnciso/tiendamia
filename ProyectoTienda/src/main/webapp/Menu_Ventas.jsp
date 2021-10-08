@@ -44,15 +44,12 @@
 	               <li class="main-nav__item"><a class="tooltip" href="Menu_Reportes.jsp"><img alt="Reportes" src="imgs/items-06.png">
 	               <span class="tooltip_box">Reportes</span>
 	               </a></li>
-	               <%
-	               String da = request.getSession().getAttribute("user").toString();
-				   %>
-                <li class="main-nav__itemU"><a href="index.jsp" class="exit_session"><%=da%></a></li>
+	               <li class="main-nav__itemU"><a href="index.jsp" class="exit_session">${usuario.getNombre_usuario()}</a></li>
             </ul>
 	   	</header>
 	   	
 	   	<div class="formulario1">
-	   	
+
 	   		<h2>Perfil de ventas</h2>
 	   		
 	   		 <form action="VentaController" method="post" class="userForm1">
@@ -83,50 +80,52 @@
 			    			<th>Valor total</th>		    		
 			    		</tr>
 			    		<tr>
-			    			<td><input type="text" name="" placeholder="Producto # 1"></td>
-			    			<td><input type="submit" value="consultar" name=""></td>
-			    			<td><input type="text" name=""></td>
-			    			<td><input type="text" name=""></td>
-			    			<td><input type="submit" value="Confirmar" style="width: 80px; height: 30px;"></td>
-			    			<td><input type="text" name=""></td>   		
+			    			<td><input type="text" name="cod1" placeholder="Producto # 1" value="${producto1.getCod_pro()}"></td>
+			    			<td><input type="submit" value="consultar" name="consp1"></td>
+			    			<td><input type="text" name="nom_p1" value="${producto1.getNom_prod()}"></td>
+			    			<td><input type="text" name="cant1"  value="${cant1}"></td>
+			    			<td><input type="submit" name="conf1" value="Confirmar" style="width: 80px; height: 30px;"></td>
+			    			<td><input type="text" name="sbt1" placeholder="Sub total" value="${sbt1}"></td>   		
 			    		</tr>
 			    		<tr>
-			    			<td><input type="text" name="" placeholder="Producto # 2"></td>
-			    			<td><input type="submit" value="consultar" name=""></td>
-			    			<td><input type="text" name=""></td>
-			    			<td><input type="text" name=""></td>
-			    			<td><input type="submit" value="Confirmar" style="width: 80px; height: 30px;"></td>
-			    			<td><input type="text" name=""></td>   		
+			    			<td><input type="text" name="cod2" placeholder="Producto # 2" value="${producto2.getCod_pro()}"></td>
+			    			<td><input type="submit" value="consultar" name="consp2"></td>
+			    			<td><input type="text" name="nom_p2" value="${producto2.getNom_prod()}"></td>
+			    			<td><input type="text" name="cant2"  value="${cant2}"></td>
+			    			<td><input type="submit" name="conf2" value="Confirmar" style="width: 80px; height: 30px;"></td>
+			    			<td><input type="text" name="sbt2" placeholder="Sub total" value="${sbt2}"></td>   		
 			    		</tr>
 			    		<tr>
-			    			<td><input type="text" name="" placeholder="Producto # 3"></td>
-			    			<td><input type="submit" value="consultar" name=""></td>
-			    			<td><input type="text" name=""></td>
-			    			<td><input type="text" name=""></td>
-			    			<td><input type="submit" value="Confirmar" style="width: 80px; height: 30px;"></td>
-			    			<td><input type="text" name=""></td>   		
+			    			<td><input type="text" name="cod3" placeholder="Producto # 3" value="${producto3.getCod_pro()}"></td>
+			    			<td><input type="submit" value="consultar" name="consp3"></td>
+			    			<td><input type="text" name="nom_p3" value="${producto3.getNom_prod()}"></td>
+			    			<td><input type="text" name="cant3"  value="${cant3}"></td>
+			    			<td><input type="submit" name="conf3" value="Confirmar" style="width: 80px; height: 30px;"></td>
+			    			<td><input type="text" name="sbt3" placeholder="Sub total" value="${sbt3}"></td>   		
+			    			<td><input type="submit" name="procesar" value="Procesar" style="width: 80px; height: 30px;"></td>
 			    		</tr>
 			    		<tr>
 			    			<td colspan="4" style="text-align: center; font-weight: bold;">Total valor de Venta</td>
-			    			<td><input type="text" name=""></td>	    			
+			    			<td><input type="text" name="sub_t" value="${stt}"></td>	    			
 			    		</tr>
 			    		<tr>
 			    			<td colspan="4" style="text-align: center; font-weight: bold;">Total IVA</td>
-			    			<td><input type="text" name=""></td>	    			
+			    			<td><input type="text" name="total_iva" value="${tiva}"></td>	    			
 			    		</tr>
 			    		<tr>
 			    			<td colspan="4" style="text-align: center; font-weight: bold;">Total con IVA</td>
-			    			<td><input type="text" name=""></td>	    			
+			    			<td><input type="text" name="total_venta" value="${pagar}"></td>	    			
 			    		</tr>
 			    		<tr class="submit_info_venta">
-			    			<td colspan="5"><input type="submit" value="Enviar información" name="" class="send_info_ventas"></td>
+			    			<td colspan="5"><input type="submit" value="Enviar información" name="enviar" class="send_info_ventas"></td>
 			    		</tr>
 		   
 		    		</table>		    		
 		    		
 		    		<div class="ced_udu">
-			    		<input type="text" name="cedUsu" value="${usuario.getCedula_usuario()}">
-			    		<input type="text" name="cedUsu" value="${usuario.getNombre_usuario()}">
+			    		<input type="hidden" name="ced_u" value="${usuario.getCedula_usuario()}">
+			    		<input type="hidden" name="nom_u" value="${usuario.getNombre_usuario()}">
+			    		<input type="submit" name="reset" value="Resetear">
 		    		</div>
 		    	</div>
 		    </form>
