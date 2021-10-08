@@ -69,7 +69,7 @@ public boolean insertarusuario(UsuariosDTO us)
 		
 	} catch (SQLException e) 
 	{
-		JOptionPane.showMessageDialog(null, "Error al insertar usuario"+e);
+		JOptionPane.showMessageDialog(null, "El usuario ya se encuentra registrado");
 		e.printStackTrace();
 	}
 	

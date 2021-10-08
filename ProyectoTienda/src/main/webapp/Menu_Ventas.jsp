@@ -50,7 +50,7 @@
 	   	
 	   	<div class="formulario1">
 
-	   		<h2>Perfil de ventas</h2>
+	   		<h2>Perfil de Ventas</h2>
 	   		
 	   		 <form action="VentaController" method="post" class="userForm1">
 		    	<div class="consultClient">
@@ -75,13 +75,13 @@
 		    		<table class="table_form">
 			    		<tr>
 			    			<th colspan="2">Código producto</th>
-			    			<th>Nombre producto</th>
+			    			<th>Nombre Producto</th>
 			    			<th colspan="2">Cantidad</th>
 			    			<th>Valor total</th>		    		
 			    		</tr>
 			    		<tr>
 			    			<td><input type="text" name="cod1" placeholder="Producto # 1" value="${producto1.getCod_pro()}"></td>
-			    			<td><input type="submit" value="consultar" name="consp1"></td>
+			    			<td><input type="submit" value="Consultar" name="consp1"></td>
 			    			<td><input type="text" name="nom_p1" value="${producto1.getNom_prod()}"></td>
 			    			<td><input type="text" name="cant1"  value="${cant1}"></td>
 			    			<td><input type="submit" name="conf1" value="Confirmar" style="width: 80px; height: 30px;"></td>
@@ -89,7 +89,7 @@
 			    		</tr>
 			    		<tr>
 			    			<td><input type="text" name="cod2" placeholder="Producto # 2" value="${producto2.getCod_pro()}"></td>
-			    			<td><input type="submit" value="consultar" name="consp2"></td>
+			    			<td><input type="submit" value="Consultar" name="consp2"></td>
 			    			<td><input type="text" name="nom_p2" value="${producto2.getNom_prod()}"></td>
 			    			<td><input type="text" name="cant2"  value="${cant2}"></td>
 			    			<td><input type="submit" name="conf2" value="Confirmar" style="width: 80px; height: 30px;"></td>
@@ -97,7 +97,7 @@
 			    		</tr>
 			    		<tr>
 			    			<td><input type="text" name="cod3" placeholder="Producto # 3" value="${producto3.getCod_pro()}"></td>
-			    			<td><input type="submit" value="consultar" name="consp3"></td>
+			    			<td><input type="submit" value="Consultar" name="consp3"></td>
 			    			<td><input type="text" name="nom_p3" value="${producto3.getNom_prod()}"></td>
 			    			<td><input type="text" name="cant3"  value="${cant3}"></td>
 			    			<td><input type="submit" name="conf3" value="Confirmar" style="width: 80px; height: 30px;"></td>
@@ -125,7 +125,7 @@
 		    		<div class="ced_udu">
 			    		<input type="hidden" name="ced_u" value="${usuario.getCedula_usuario()}">
 			    		<input type="hidden" name="nom_u" value="${usuario.getNombre_usuario()}">
-			    		<input type="submit" name="reset" value="Resetear">
+			    		<input type="submit" name="reset" value="Finalizar">
 		    		</div>
 		    	</div>
 		    </form>

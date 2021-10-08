@@ -43,7 +43,7 @@ public class ClientesDAO
 			
 		} catch (SQLException e) 
 		{
-			JOptionPane.showMessageDialog(null, "Error al insertar el cliente " + e);
+			JOptionPane.showMessageDialog(null, "El cliente ya se encuentra registrado");
 			e.printStackTrace();
 		}
 		return dato;
