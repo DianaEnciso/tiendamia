@@ -55,18 +55,18 @@
 	   	
 	   		<h2>Perfil de ventas</h2>
 	   		
-	   		 <form action="ProductController" method="post" class="userForm1">
+	   		 <form action="VentaController" method="post" class="userForm1">
 		    	<div class="consultClient">
 		    		<div>
 			    		<label for="cedula">Cédula</label>
 			    		<div class="consult_cedula">
-				    		<input type="text" id="cedula" name="">
-				    		<input type="submit" value="Consultar" name="">
+				    		<input type="text" id="cedula" name="cedula" value="${cliente.getCedula_clien()}">
+				    		<input type="submit" value="Consultar" name="consultar">
 			    		</div>
 		    		</div>
 		    		<div>
 			    		<label for="cliente">Cliente</label>
-			    		<input type="text" id="cliente">
+			    		<input type="text" id="cliente" name="nombre" value="${cliente.getNombre_clien()}">
 		    		</div>
 		    		<div>
 			    		<label for="consecutivo">Consecutivo</label>
@@ -79,7 +79,7 @@
 			    		<tr>
 			    			<th colspan="2">Código producto</th>
 			    			<th>Nombre producto</th>
-			    			<th>Cantidad</th>
+			    			<th colspan="2">Cantidad</th>
 			    			<th>Valor total</th>		    		
 			    		</tr>
 			    		<tr>
@@ -87,6 +87,7 @@
 			    			<td><input type="submit" value="consultar" name=""></td>
 			    			<td><input type="text" name=""></td>
 			    			<td><input type="text" name=""></td>
+			    			<td><input type="submit" value="Confirmar" style="width: 80px; height: 30px;"></td>
 			    			<td><input type="text" name=""></td>   		
 			    		</tr>
 			    		<tr>
@@ -94,6 +95,7 @@
 			    			<td><input type="submit" value="consultar" name=""></td>
 			    			<td><input type="text" name=""></td>
 			    			<td><input type="text" name=""></td>
+			    			<td><input type="submit" value="Confirmar" style="width: 80px; height: 30px;"></td>
 			    			<td><input type="text" name=""></td>   		
 			    		</tr>
 			    		<tr>
@@ -101,6 +103,7 @@
 			    			<td><input type="submit" value="consultar" name=""></td>
 			    			<td><input type="text" name=""></td>
 			    			<td><input type="text" name=""></td>
+			    			<td><input type="submit" value="Confirmar" style="width: 80px; height: 30px;"></td>
 			    			<td><input type="text" name=""></td>   		
 			    		</tr>
 			    		<tr>
@@ -121,8 +124,10 @@
 		   
 		    		</table>		    		
 		    		
-		    		<input type="text" name="cedUsu" value="${usuario.getCedula_usuario()}">
-		    		<input type="text" name="cedUsu" value="${usuario.getNombre_usuario()}">
+		    		<div class="ced_udu">
+			    		<input type="text" name="cedUsu" value="${usuario.getCedula_usuario()}">
+			    		<input type="text" name="cedUsu" value="${usuario.getNombre_usuario()}">
+		    		</div>
 		    	</div>
 		    </form>
 	   	</div>

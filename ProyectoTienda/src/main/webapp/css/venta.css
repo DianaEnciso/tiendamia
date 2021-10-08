@@ -24,7 +24,7 @@ src:url("../fonts/Roboto-Regular.ttf");
 }
 
 .formulario1 {
-	margin: 10px 0 30px 680px;
+	margin: 10px 0 30px 500px;
 }
 
 .formulario1 h2 {
@@ -32,7 +32,7 @@ src:url("../fonts/Roboto-Regular.ttf");
 	font-size: 35px;
 	font-weight: bold;
 	border-bottom: 2px solid #D3D3D3;
-	padding-left: 250px;
+	padding-left: 400px;
 }
 
 .userForm1 {
@@ -92,7 +92,11 @@ input[type=submit] {
 	font-size: 20px;
 	width: 400px;
 	padding: 8px !important;
-	margin: 20px 0 20px 200px;
+	margin: 20px 0 20px 300px;
+}
+
+.ced_udu {
+	padding-left: 400px;
 }
 
 

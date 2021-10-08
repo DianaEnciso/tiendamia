@@ -23,32 +23,38 @@ src:url("../fonts/Roboto-Regular.ttf");
 	height: 90vh;
 }
 
-.cargar_prod {
-	margin: 15px 0;
+.userFormFile {
+	margin-top: 20px;
+	width: 33.5%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #a7d595;
+	padding: 0 10px 10px 10px;
+	border-radius: 5px;
+}
+
+.inputsFile {
 	display: flex;
 	flex-direction: column;
-	align-items: start;
 }
 
-.cargar_prod h3 {
-	color: #448755;
-	font-weight: bold;
-	text-align: center;	
+.inputsFile input {
+	margin-top: 10px;
 }
 
-.cargar_prod input {
-	margin: 10px 0 0 0;
-}
-
-.cargar_prod input[type=submit] {
+.inputsFile input[type=submit] {
 	padding: 8px 10px;
 	border-radius: 5px;
 	border-style: none;
 	cursor: pointer;
-	background-color: #6c965efc;
+	background-color: #416137fc;
 	color: white;
 }
 
-.cargar_prod input[type=submit]:hover  {
-	background-color: #416137fc;
+.userFormFile h3 {
+	padding-left: 50px;
+	color: #2b8428;
+	font-weight: bold;
+	padding-top: 5px;
 }
