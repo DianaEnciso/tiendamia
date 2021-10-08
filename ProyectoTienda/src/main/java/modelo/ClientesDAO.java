@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
 import javax.swing.JOptionPane;
 import controller.Conexion;
 
@@ -131,6 +133,45 @@ public class ClientesDAO
 		}
 		
 		return dat;
+	}
+	
+	public ArrayList<ClientesDTO> ConsGenCli(){
+		
+		ArrayList<ClientesDTO> lista=new ArrayList<ClientesDTO>();
+		try {
+			ps=cnn.prepareStatement("SELECT * FROM clientes");
+			rs=ps.executeQuery();
+			while(rs.next()) {
+				cliente=new ClientesDTO( rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+				lista.add(cliente);
+			}
+		
+		} catch (SQLException e) {
+			JOptionPane.showMessageDialog(null,"Error al hacer la consulta general de clientes: " + e);
+		}
+		return lista;
+	}
+	
+	
+	
+	public ArrayList<ClientesDTO> ConsVntacli(){
+		
+		ArrayList<ClientesDTO> lista=new ArrayList<ClientesDTO>();
+
+		try {
+			ps=cnn.prepareStatement("SELECT C.cedula_cliente AS cedula_cliente, C.nombre_cliente AS nombre_cliente, V.valor_venta AS valor_venta FROM clientes AS C, ventas AS V WHERE (C.cedula_cliente = V.cedula_cliente);");
+			rs=ps.executeQuery();
+			while(rs.next()) {
+				cliente = new ClientesDTO(rs.getInt(1), rs.getString(2), rs.getDouble(3));
+				lista.add(cliente);
+				
+			}
+			
+					
+		} catch (SQLException e) {
+			JOptionPane.showMessageDialog(null, "Error al hacer consulta cruzada: "+ e);
+		}
+		return lista;
 	}
 	
 }

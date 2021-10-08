@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
 import javax.swing.JOptionPane;
 import controller.Conexion;
 
@@ -168,4 +170,21 @@ public UsuariosDTO consultarUnUsuario(UsuariosDTO us)
 		return dat;
 
 }
+	
+	public ArrayList<UsuariosDTO> ConsGenUsu(){
+		
+		ArrayList<UsuariosDTO> lista=new ArrayList<UsuariosDTO>();
+		try {
+			ps=cnn.prepareStatement("SELECT * FROM usuarios");
+			rs=ps.executeQuery();
+			while(rs.next()) {
+				usu=new UsuariosDTO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+				lista.add(usu);
+			}
+		
+		} catch (SQLException e) {
+			JOptionPane.showMessageDialog(null,"Error al hacer la consulta general de usuarios: " + e);
+		}
+		return lista;
+	}
 }
