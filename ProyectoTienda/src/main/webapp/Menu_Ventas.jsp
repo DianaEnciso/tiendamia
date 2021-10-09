@@ -55,18 +55,18 @@
 	   		 <form action="VentaController" method="post" class="userForm1">
 		    	<div class="consultClient">
 		    		<div>
-			    		<label for="cedula">Cédula</label>
+			    		<label for="cedula" style="margin-left: 60px; font-size: 16px;">Cédula</label>
 			    		<div class="consult_cedula">
 				    		<input type="text" id="cedula" name="cedula" value="${cliente.getCedula_clien()}">
 				    		<input type="submit" value="Consultar" name="consultar">
 			    		</div>
 		    		</div>
 		    		<div>
-			    		<label for="cliente">Cliente</label>
+			    		<label for="cliente" style="margin-left: 60px; font-size: 16px;">Cliente</label>
 			    		<input type="text" id="cliente" name="nombre" value="${cliente.getNombre_clien()}">
 		    		</div>
 		    		<div>
-			    		<label for="consecutivo">Consecutivo</label>
+			    		<label for="consecutivo" style="margin-left: 45px; font-size: 16px;">Consecutivo</label>
 			    		<input type="text" id="consecutivo" value="${consecutivo}"> 
 		    		</div>  	
 		    	</div>
@@ -74,10 +74,10 @@
 		    	<div class="productConsult">
 		    		<table class="table_form">
 			    		<tr>
-			    			<th colspan="2">Código producto</th>
-			    			<th>Nombre Producto</th>
-			    			<th colspan="2">Cantidad</th>
-			    			<th>Valor total</th>		    		
+			    			<th colspan="2" style="font-weight: bold;"><label style="margin-left: 35px; font-size: 16px;">Código producto</label></th>
+			    			<th style="font-weight: bold"><label style="margin-left: 29px; font-size: 16px;">Nombre Producto</label></th>
+			    			<th colspan="2" style="font-weight: bold"><label style="margin-left: 50px; font-size: 16px;">Cantidad</label></th>
+			    			<th style="font-weight: bold"><label style="margin-left: 50px; font-size: 16px;">Valor total</label></th>		    		
 			    		</tr>
 			    		<tr>
 			    			<td><input type="text" name="cod1" placeholder="Producto # 1" value="${producto1.getCod_pro()}"></td>
@@ -102,22 +102,25 @@
 			    			<td><input type="text" name="cant3"  value="${cant3}"></td>
 			    			<td><input type="submit" name="conf3" value="Confirmar" style="width: 80px; height: 30px;"></td>
 			    			<td><input type="text" name="sbt3" placeholder="Sub total" value="${sbt3}"></td>   		
-			    			<td><input type="submit" name="procesar" value="Procesar" style="width: 80px; height: 30px;"></td>
+			    			<!-- <td><input type="submit" name="procesar" value="Procesar" style="width: 80px; height: 30px;"></td> -->
 			    		</tr>
 			    		<tr>
-			    			<td colspan="4" style="text-align: center; font-weight: bold;">Total valor de Venta</td>
+			    			<td colspan="6"><input type="submit" name="procesar" value="Procesar" style="width: 80px; height: 30px; margin: 10px 0 15px 750px;"></td>
+			    		</tr>
+			    		<tr>
+			    			<td colspan="5" style="text-align: right; font-weight: bold;">Total valor de Venta &nbsp&nbsp&nbsp</td>
 			    			<td><input type="text" name="sub_t" value="${stt}"></td>	    			
 			    		</tr>
 			    		<tr>
-			    			<td colspan="4" style="text-align: center; font-weight: bold;">Total IVA</td>
+			    			<td colspan="5" style="text-align: right; font-weight: bold;">Total IVA &nbsp&nbsp&nbsp</td>
 			    			<td><input type="text" name="total_iva" value="${tiva}"></td>	    			
 			    		</tr>
 			    		<tr>
-			    			<td colspan="4" style="text-align: center; font-weight: bold;">Total con IVA</td>
+			    			<td colspan="5" style="text-align: right; font-weight: bold; font-size: 20px;">Valor a pagar &nbsp&nbsp</td>
 			    			<td><input type="text" name="total_venta" value="${pagar}"></td>	    			
 			    		</tr>
 			    		<tr class="submit_info_venta">
-			    			<td colspan="5"><input type="submit" value="Enviar información" name="enviar" class="send_info_ventas"></td>
+			    			<td colspan="6"><input type="submit" value="Enviar información" name="enviar" class="send_info_ventas"></td>
 			    		</tr>
 		   
 		    		</table>		    		

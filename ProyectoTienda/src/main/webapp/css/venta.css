@@ -24,7 +24,7 @@ src:url("../fonts/Roboto-Regular.ttf");
 }
 
 .formulario1 {
-	margin: 10px 0 30px 500px;
+	margin: 10px 0 30px 600px;
 }
 
 .formulario1 h2 {
@@ -63,7 +63,7 @@ label {
 }
 
 .consultClient div{
-	margin-right: 40px;
+	margin-right: 88px;
 }
 
 .consult_cedula {
@@ -72,7 +72,7 @@ label {
 }
 
 .consult_cedula input{
-	margin-right: 30px;	
+	margin-right: 5px;	
 }
 
 input[type=submit] {
@@ -89,14 +89,14 @@ input[type=submit] {
 	background-color: #fac900 !important;
 	color: #000000 !important;
 	font-weight: bold;
-	font-size: 20px;
-	width: 400px;
-	padding: 8px !important;
-	margin: 20px 0 20px 300px;
+	font-size: 16px;
+	width: 200px;
+	padding: 5px 4px !important;
+	margin: 20px 0 20px 680px;
 }
 
 .ced_udu {
-	padding-left: 400px;
+	padding-left: 770px;
 }
 
 
