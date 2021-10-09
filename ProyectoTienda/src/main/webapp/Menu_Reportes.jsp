@@ -5,6 +5,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/ConGenUsu.js"></script>
 <title>Consultas y reportes</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/Menu_Nav.css">
@@ -54,8 +56,20 @@
 	   	
 	   	<div class="formulario">
 	   		<h2>Consultas y reportes</h2>
+	   		
+	   		<form action="">
+	   		<div id="botns_consultas2" >
+		   		<input class="btnConsUsu" type="button" value="Consultar usuarios" >
+		   		<input class="btnConsCli" type="button" value="Consultar clientes" >
+		   		<input class="btnConsVta" type="button" value="Consultar ventas" >
+	   		</div>
+	   		</form>
+
+	   		<div class="tabla_ConsGen">
+	   			<table  id="tabla"></table>
+  			</div>
 	   	</div>
-	   	
+   	
 	   	<div class="footer">
 	    	<div class="logoFooter">
 	    		<a href="https://misionticueb.myopenlms.net/" target="_blank"><img alt="logo" src="imgs/logo-misiontic.png" width="100px"></a>

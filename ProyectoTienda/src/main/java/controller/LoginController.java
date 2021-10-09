@@ -74,7 +74,18 @@ public class LoginController extends HttpServlet {
 				conscod = new VentasDAO();
 				int consecutive;
 				consecutive = conscod.ConsultarCodVta();
-				sesion.setAttribute("consecutivo", consecutive+1);				
+				sesion.setAttribute("consecutivo", consecutive+1);	
+				
+				if(usu.getUsuario().equals("admininicial")) {
+					int ced;
+					ced=usu.getCedula_usuario();
+					UsuariosDTO eladmin;
+					UsuariosDAO usudao = new UsuariosDAO();
+					eladmin = new UsuariosDTO(ced);
+					usudao.eliminarusuario(eladmin);
+					JOptionPane.showMessageDialog(null, "Recuerde crear al menos un usuario.\nEl acceso con este usuario provisional será deshabilitado.");
+				}
+				
 				response.sendRedirect("home.jsp");
 			}
 			else {

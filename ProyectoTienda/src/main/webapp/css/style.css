@@ -243,3 +243,49 @@ body{
 }
 
 
+
+#botns_consultas2{
+	display: flex;
+	
+	margin: 20px 0 0 0;
+}
+
+#botns_consultas2 input {
+	padding: 8px 10px;
+	border-radius: 5px;
+	border-style: none;
+	cursor: pointer;
+	background-color: #6c965efc;
+	color: white;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+#botns_consultas2 input:hover {
+	background-color: #416137fc;
+}
+
+
+.tabla_ConsGen table {
+	width: 100%;
+	margin-top: 50px;
+	border: 5px solid  #6c965efc;
+	margin-right: 120px;
+	text-align: center;
+}
+
+
+.tabla_ConsGen th {
+	color: white;
+	background-color:  #0C331B;
+	text-align: center;
+	
+	
+}
+
+.tabla_ConsGen td {
+	border: 1px solid #0C331B;
+	background-color: white;
+	text-align: center;
+	
+}

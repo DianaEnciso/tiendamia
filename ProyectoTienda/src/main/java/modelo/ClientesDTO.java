@@ -8,6 +8,7 @@ public class ClientesDTO
 	private String direccion__clien;
 	private String email_clien;
 	private String telef_clien;
+	private double comp_cli;
 	
 	
 	
@@ -33,7 +34,26 @@ public class ClientesDTO
 	}
 
 
+	public ClientesDTO(int cedula_clien, String nombre_clien, double comp_cli) {
+	super();
+	this.cedula_clien = cedula_clien;
+	this.nombre_clien = nombre_clien;
+	this.comp_cli = comp_cli;
+}
 
+
+	
+	
+
+	public double getComp_cli() {
+		return comp_cli;
+	}
+
+
+
+	public void setComp_cli(double comp_cli) {
+		this.comp_cli = comp_cli;
+	}
 
 
 
