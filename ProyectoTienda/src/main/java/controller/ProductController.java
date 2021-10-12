@@ -105,7 +105,7 @@ public class ProductController extends HttpServlet {
 		}	
 			
 		Part archivo= request.getPart("archivo");
-		String Url="C:\\\\Users\\\\profe\\\\git\\\\tiendamia\\\\ProyectoTienda\\\\src\\\\main\\\\webapp\\\\documentos\\\\";
+		String Url="C:\\\\Users\\\\profe\\\\git\\\\tiendamia\\\\ProyectoTienda\\\\src\\\\main\\\\webapp\\\\documentos";
 					
 		if(request.getParameter("subircsv")!=null) {
 			//JOptionPane.showMessageDialog(null, "cargar oprimido");

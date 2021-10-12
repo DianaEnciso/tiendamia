@@ -45,7 +45,7 @@ public class VentasDAO {
 			ps.setInt(2, ven.getCedula_usuario());
 			ps.setDouble(3, ven.getIva_venta());
 			ps.setDouble(4, ven.getTotal_venta());
-			ps.setDouble(5, ven.getTotal_venta());
+			ps.setDouble(5, ven.getValor_venta());
 			x=ps.executeUpdate();
 			
 			if (x>0) {
