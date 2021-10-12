@@ -61,7 +61,11 @@
 	   		<div id="botns_consultas2" >
 		   		<input class="btnConsUsu" type="button" value="Consultar usuarios" >
 		   		<input class="btnConsCli" type="button" value="Consultar clientes" >
+		   		<input class="btnConsPro" type="button" value="Consultar proveedores" >
+		   		<input class="btnConsComp" type="button" value="Consultar compras" >
+		   		<input class="btnCliComp" type="button" value="Compras por cliente" >
 		   		<input class="btnConsVta" type="button" value="Consultar ventas" >
+		   		<input class="btnCliVent" type="button" value="Ventas por usuario" >
 	   		</div>
 	   		</form>
 
