@@ -105,10 +105,10 @@ public class ProductController extends HttpServlet {
 		}	
 			
 		Part archivo= request.getPart("archivo");
-		String Url="C:\\\\\\\\Users\\\\\\\\User\\\\\\\\git\\\\\\\\tiendamia\\\\\\\\ProyectoTienda\\\\\\\\src\\\\\\\\main\\\\\\\\webapp\\\\\\\\documentos\\\\\\\\";
+		String Url="C:\\\\Users\\\\profe\\\\git\\\\tiendamia\\\\ProyectoTienda\\\\src\\\\main\\\\webapp\\\\documentos\\\\";
 					
 		if(request.getParameter("subircsv")!=null) {
-			JOptionPane.showMessageDialog(null, "cargar oprimido");
+			//JOptionPane.showMessageDialog(null, "cargar oprimido");
 			try {
 			
 			InputStream file= archivo.getInputStream();
@@ -123,7 +123,7 @@ public class ProductController extends HttpServlet {
 			escribir.close();
 			
 			boolean x;
-			JOptionPane.showMessageDialog(null, "se cargó el archivo correctamente");
+			//JOptionPane.showMessageDialog(null, "se cargó el archivo correctamente");
 			
 			ProductosDAO prodao = new ProductosDAO();
 			x=prodao.cargarCSV(Url + "listaProductos.csv");

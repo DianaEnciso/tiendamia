@@ -70,12 +70,12 @@ public class VentaController extends HttpServlet {
 			if(cliente != null) {
 				sesion.setAttribute("cliente", cliente);
 				request.getRequestDispatcher("Menu_Ventas.jsp").forward(request, response);
+				nom_c = cliente.getNombre_clien();
 			} else {
 				JOptionPane.showMessageDialog(null, "Cliente no esta registrado\n             Regístrelo");
 				response.sendRedirect("Menu_Cliente.jsp?ced="+ced_c+"&&dire="+dir+"&&ema="+cor+"&&nam="+nom+"&&tel="+tel);
 				
 			}			
-			nom_c = cliente.getNombre_clien();
 		}
 		
 		//CONSULTA DE PRODUCTOS

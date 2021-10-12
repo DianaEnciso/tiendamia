@@ -15,11 +15,11 @@ public class Conexion
 	{
 		try 
 		{
-			Class.forName("com.mysql.cj.jdbc.Driver");
+Class.forName("org.mariadb.jdbc.Driver");
 			
 			try 
 			{
-				cnn=DriverManager.getConnection("jdbc:mysql://localhost/minfruvertienda","root","");
+				cnn=DriverManager.getConnection("jdbc:mariadb://tiendagenericagrupo43-10-32.czo3ixoe3xoe.us-east-1.rds.amazonaws.com/bd_MinFruver","admin","123456789");
 				//JOptionPane.showMessageDialog(null,"Conexion ok");
 				
 			} catch (SQLException e) 
