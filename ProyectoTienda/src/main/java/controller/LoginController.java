@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
 
-import com.mysql.cj.Session;
-
 import modelo.LoginDAO;
 import modelo.LoginDTO;
 import modelo.UsuariosDAO;

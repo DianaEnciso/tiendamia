@@ -42,7 +42,7 @@ public class ProveedoresDAO
 			
 		} catch (SQLException e) 
 		{
-			JOptionPane.showMessageDialog(null, "El proveedor ya se encuentra registrado");
+			JOptionPane.showMessageDialog(null, "El proveedor ya se encuentra registrado"+e);
 			e.printStackTrace();
 		}
 		return dato;
