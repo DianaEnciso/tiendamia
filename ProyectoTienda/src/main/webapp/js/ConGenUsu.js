@@ -75,31 +75,40 @@ function consultarclientes(){
 }
 
 
+var total= 0;
+
 function consultarventas(){
-	$.ajax({
-	  url: "ConGenVent",
-	  type: "POST",
-	  dataType: 'json',
-	  success: function( result ) {
-	    console.log(result);
-		let tab=document.getElementById('tabla');
-		tab.innerHTML='';
-		tab.innerHTML+=`<tr>
-							<th>Documento</th>
-							<th>Nombre</th>
-							<th>Valor compras</th>
-						</tr>`;
-	
-			for(let i of result){
-				tab.innerHTML+=`<tr>
-									<td>${i.cedula_clien}</td>
-									<td>${i.nombre_clien}</td>
-									<td>${i.comp_cli}</td>
-								</tr>`;
-				
-			}
-		}
-	});
+  $.ajax({
+    url: "ConGenVent",
+    type: "POST",
+    dataType: 'json',
+    success: function( result ) {
+      console.log(result);
+    let tab=document.getElementById('tabla');
+    tab.innerHTML='';
+    tab.innerHTML+=`<tr>
+              <th>Documento</th>
+              <th>Nombre</th>
+              <th>Valor compras</th>
+            </tr>`;
+  
+      for(let i of result){
+        tab.innerHTML+=`<tr>
+                  <td>${i.cedula_clien}</td>
+                  <td>${i.nombre_clien}</td>
+                  <td>${i.comp_cli}</td>
+                </tr>`;
+        total+=i.comp_cli;
+        
+      }
+      tab.innerHTML+=` 
+        <tr>
+        <td></td><td rowspan="2"><b>Total</td><td><b>${total}</td>
+        </tr>`;
+    }
+    
+  });
+
 }
 
 });
