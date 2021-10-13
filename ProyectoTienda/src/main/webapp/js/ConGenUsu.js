@@ -8,9 +8,13 @@ $('.btnConsCli').on('click',function(){
 	consultarclientes();
 });		
 
-$('.btnConsVta').on('click',function(){
-	consultarventas();
+$('.btnConsComp').on('click',function(){
+	consultarcompras();
 });	
+
+$('.btnConsProv').on('click',function(){
+	consultarproveedores();	
+});
 
 function consultarusuarios(){
 	$.ajax({
@@ -77,7 +81,7 @@ function consultarclientes(){
 
 var total= 0;
 
-function consultarventas(){
+function consultarcompras(){
   $.ajax({
     url: "ConGenVent",
     type: "POST",
@@ -89,7 +93,7 @@ function consultarventas(){
     tab.innerHTML+=`<tr>
               <th>Documento</th>
               <th>Nombre</th>
-              <th>Valor compras</th>
+              <th>Valor Compras</th>
             </tr>`;
   
       for(let i of result){
@@ -108,6 +112,41 @@ function consultarventas(){
     }
     
   });
+
+}
+
+function consultarproveedores()
+{
+	$.ajax(
+		{
+	  url: "ConsultaGenProveedores",
+	  type: "POST",
+	  dataType: 'json',
+	  success: function( result ) 
+		{
+	    console.log(result);
+		let tab=document.getElementById('tabla');
+		tab.innerHTML='';
+		tab.innerHTML+=`<tr>
+							<th>NIT</th>
+								<th>Nombre</th>
+								<th>Ciudad</th>
+								<th>Direccion</th>
+								<th>Telefono</th>
+							</tr>`;
+							
+		for(let i of result)
+		{
+				tab.innerHTML+=`<tr>
+									<td>${i.nit}</td>
+									<td>${i.name}</td>
+									<td>${i.city}</td>
+									<td>${i.address}</td>
+									<td>${i.tele}</td>
+								</tr>`;
+		}
+	}
+});
 
 }
 
