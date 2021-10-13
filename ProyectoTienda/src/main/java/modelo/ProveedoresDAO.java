@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
 import javax.swing.JOptionPane;
 import controller.Conexion;
 
@@ -135,5 +137,27 @@ public class ProveedoresDAO
 	return x;
 	}
 	
+	//CONSULTA GENERAL DE PROVEEDORES
 	
+	public ArrayList<ProveedoresDTO> ConsGenProv()
+	{
+		ArrayList<ProveedoresDTO> lista= new ArrayList<ProveedoresDTO>();
+		
+		try {
+			ps=cnn.prepareStatement("SELECT * FROM proveedores");
+			rs=ps.executeQuery();
+			
+			while(rs.next())
+			{
+				proveedor= new ProveedoresDTO( rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+				lista.add(proveedor);
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return lista;
+	}
 }
