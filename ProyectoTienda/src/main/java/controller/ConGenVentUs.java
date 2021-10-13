@@ -9,25 +9,24 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.swing.JOptionPane;
 
 import com.google.gson.Gson;
 
-import modelo.ClientesDAO;
-import modelo.ClientesDTO;
-
+import modelo.UsuariosDAO;
+import modelo.UsuariosDTO;
 
 /**
- * Servlet implementation class ConGenVent
+ * Servlet implementation class ConGenVentUs
  */
-@WebServlet("/ConGenVent")
-public class ConGenVent extends HttpServlet {
+@WebServlet("/ConGenVentUs")
+public class ConGenVentUs extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ConGenVent() {
+    public ConGenVentUs() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -44,10 +43,12 @@ public class ConGenVent extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//JOptionPane.showMessageDialog(null, "en el servlet de cons general ventas");
 		PrintWriter out=response.getWriter();
-		ArrayList<ClientesDTO> lista=new ArrayList<>();
-		ClientesDAO clidao=new ClientesDAO();
-		lista=clidao.ConsVntacli();
+		ArrayList<UsuariosDTO> lista=new ArrayList<>();
+		UsuariosDAO usudao=new UsuariosDAO();
+		lista=usudao.ConsVntGen();
+		//JOptionPane.showMessageDialog(null, "de vuelta al servlet: "+ lista.size());
 		Gson gson=new Gson();
 		out.print(gson.toJson(lista));
 	}

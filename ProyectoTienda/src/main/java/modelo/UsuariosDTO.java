@@ -7,6 +7,9 @@ public class UsuariosDTO
 	private String nombre_usuario;
 	private String password;
 	private String usuario;
+	private double vent_usu;
+	private int cant_vent;
+	private int cod_vent;
 	
 	
 	
@@ -21,7 +24,31 @@ public class UsuariosDTO
 		this.usuario = usuario;
 	}
 
-	
+	public UsuariosDTO(int cod_vent, int cedula_usuario, String nombre_usuario, double vent_usu) {
+		super();
+		this.cod_vent = cod_vent;
+		this.cedula_usuario = cedula_usuario;
+		this.nombre_usuario = nombre_usuario;
+		this.vent_usu = vent_usu;
+	}
+
+
+
+	public UsuariosDTO(int cedula_usuario, String nombre_usuario, double vent_usu) {
+		super();
+		this.cedula_usuario = cedula_usuario;
+		this.nombre_usuario = nombre_usuario;
+		this.vent_usu = vent_usu;
+	}
+
+
+	public UsuariosDTO(int cedula_usuario, String nombre_usuario, double vent_usu, int cant_vent) {
+		super();
+		this.cedula_usuario = cedula_usuario;
+		this.nombre_usuario = nombre_usuario;
+		this.vent_usu = vent_usu;
+		this.cant_vent = cant_vent;
+	}
 	
 
 	public UsuariosDTO(int cedula_usuario) 
@@ -41,6 +68,30 @@ public class UsuariosDTO
 
 
 
+
+	public double getVent_usu() {
+		return vent_usu;
+	}
+
+	public void setVent_usu(double vent_usu) {
+		this.vent_usu = vent_usu;
+	}
+
+	public int getCant_vent() {
+		return cant_vent;
+	}
+
+	public void setCant_vent(int cant_vent) {
+		this.cant_vent = cant_vent;
+	}
+
+	public int getCod_vent() {
+		return cod_vent;
+	}
+
+	public void setCod_vent(int cod_vent) {
+		this.cod_vent = cod_vent;
+	}
 
 	public int getCedula_usuario() 
 	{

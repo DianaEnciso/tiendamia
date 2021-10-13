@@ -8,13 +8,25 @@ $('.btnConsCli').on('click',function(){
 	consultarclientes();
 });		
 
+$('.btnConsProv').on('click',function(){
+	consultarproveedores();	
+});
+
 $('.btnConsComp').on('click',function(){
 	consultarcompras();
 });	
 
-$('.btnConsProv').on('click',function(){
-	consultarproveedores();	
-});
+$('.btnCliComp').on('click',function(){
+	consultarcompraclientes();
+});	
+
+$('.btnConsVta').on('click',function(){
+	consultarventas();
+});	
+
+$('.btnUsuVta').on('click',function(){
+	consultarventausuarios();
+});	
 
 function consultarusuarios(){
 	$.ajax({
@@ -78,43 +90,6 @@ function consultarclientes(){
 	});
 }
 
-
-var total= 0;
-
-function consultarcompras(){
-  $.ajax({
-    url: "ConGenVent",
-    type: "POST",
-    dataType: 'json',
-    success: function( result ) {
-      console.log(result);
-    let tab=document.getElementById('tabla');
-    tab.innerHTML='';
-    tab.innerHTML+=`<tr>
-              <th>Documento</th>
-              <th>Nombre</th>
-              <th>Valor Compras</th>
-            </tr>`;
-  
-      for(let i of result){
-        tab.innerHTML+=`<tr>
-                  <td>${i.cedula_clien}</td>
-                  <td>${i.nombre_clien}</td>
-                  <td>${i.comp_cli}</td>
-                </tr>`;
-        total+=i.comp_cli;
-        
-      }
-      tab.innerHTML+=` 
-        <tr>
-        <td></td><td rowspan="2"><b>Total</td><td><b>${total}</td>
-        </tr>`;
-    }
-    
-  });
-
-}
-
 function consultarproveedores()
 {
 	$.ajax(
@@ -149,5 +124,144 @@ function consultarproveedores()
 });
 
 }
+
+var total= 0;
+
+function consultarcompras(){
+	
+  $.ajax({
+    url: "ConGenVent",
+    type: "POST",
+    dataType: 'json',
+    success: function( result ) {
+      console.log(result);
+    let tab=document.getElementById('tabla');
+    tab.innerHTML='';
+    tab.innerHTML+=`<tr>
+              <th>Codigo de venta</th>
+			  <th>Documento</th>
+              <th>Nombre</th>
+              <th>Valor Compras</th>
+            </tr>`;
+  
+      for(let i of result){
+        tab.innerHTML+=`<tr>
+				  <td>${i.cod_vent}</td>
+                  <td>${i.cedula_clien}</td>
+                  <td>${i.nombre_clien}</td>
+                  <td>${i.comp_cli}</td>
+                </tr>`;
+        
+        total+=i.comp_cli;
+      }
+      tab.innerHTML+=` 
+        <tr>
+        <td></td><td></td><td rowspan="2"><b>Total</td><td><b>${total}</td>
+        </tr>`;
+    }
+    
+  });
+
+}
+
+
+function consultarcompraclientes(){
+	
+	$.ajax({
+	  url: "ConsVentClie",
+	  type: "POST",
+	  dataType: 'json',
+	  success: function( result ) {
+	    console.log(result);
+		let tab=document.getElementById('tabla');
+		tab.innerHTML='';
+		tab.innerHTML+=`<tr>
+							<th>Documento</th>
+							<th>Nombre del cliente</th>
+							<th>Cantidad de compras</th>
+							<th>Total en compras</th>
+						</tr>`;
+	
+			for(let i of result){
+				tab.innerHTML+=`<tr>
+									<td>${i.cedula_clien}</td>
+									<td>${i.nombre_clien}</td>
+									<td>${i.cant_comp}</td>
+									<td>${i.comp_cli}</td>
+								</tr>`;
+			}
+		}
+	});
+}
+
+var total2= 0;
+function consultarventas(){
+	
+	$.ajax({
+	  url: "ConGenVentUs",
+	  type: "POST",
+	  dataType: 'json',
+	  success: function( result ) {
+	    console.log(result);
+		let tab=document.getElementById('tabla');
+		tab.innerHTML='';
+		tab.innerHTML+=`<tr>
+							<th>Codigo de venta</th>
+							<th>Documento</th>
+							<th>Nombre del usuario</th>
+							<th>Valor ventas</th>
+						</tr>`;
+	
+			for(let i of result){
+				tab.innerHTML+=`<tr>
+									<td>${i.cod_vent}</td>
+									<td>${i.cedula_usuario}</td>
+									<td>${i.nombre_usuario}</td>
+									<td>${i.vent_usu}</td>
+								</tr>`;
+			total2+=i.vent_usu;
+        
+      }
+      tab.innerHTML+=` 
+        <tr>
+        <td></td><td></td><td rowspan="2"><b>Total</td><td><b>${total2}</td>
+        </tr>`;
+    }
+    
+  });
+
+}
+
+function consultarventausuarios(){
+	
+	$.ajax({
+	  url: "ConVenUsu",
+	  type: "POST",
+	  dataType: 'json',
+	  success: function( result ) {
+	    console.log(result);
+		let tab=document.getElementById('tabla');
+		tab.innerHTML='';
+		tab.innerHTML+=`<tr>
+							<th>Documento</th>
+							<th>Nombre del usuario</th>
+							<th>Cantidad de ventas</th>
+							<th>Total ventas</th>
+						</tr>`;
+	
+			for(let i of result){
+				tab.innerHTML+=`<tr>
+									<td>${i.cedula_usuario}</td>
+									<td>${i.nombre_usuario}</td>
+									<td>${i.cant_vent}</td>
+									<td>${i.vent_usu}</td>
+								</tr>`;
+			}
+		}
+	});
+}
+
+
+
 
 });

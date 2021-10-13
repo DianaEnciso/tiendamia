@@ -134,7 +134,7 @@ public class ClientesDAO
 		
 		return dat;
 	}
-	
+	 //consulta general clientes
 	public ArrayList<ClientesDTO> ConsGenCli(){
 		
 		ArrayList<ClientesDTO> lista=new ArrayList<ClientesDTO>();
@@ -153,16 +153,16 @@ public class ClientesDAO
 	}
 	
 	
-	
+	//consulta compras por clientes
 	public ArrayList<ClientesDTO> ConsVntacli(){
 		
 		ArrayList<ClientesDTO> lista=new ArrayList<ClientesDTO>();
 
 		try {
-			ps=cnn.prepareStatement("SELECT C.cedula_cliente AS cedula_cliente, C.nombre_cliente AS nombre_cliente, V.valor_venta AS valor_venta FROM clientes AS C, ventas AS V WHERE (C.cedula_cliente = V.cedula_cliente);");
+			ps=cnn.prepareStatement("SELECT V.codigo_venta AS codigo_ventas, C.cedula_cliente AS cedula_cliente, C.nombre_cliente AS nombre_cliente, V.valor_venta AS valor_venta FROM clientes AS C, ventas AS V WHERE (C.cedula_cliente = V.cedula_cliente);");
 			rs=ps.executeQuery();
 			while(rs.next()) {
-				cliente = new ClientesDTO(rs.getInt(1), rs.getString(2), rs.getDouble(3));
+				cliente = new ClientesDTO(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getDouble(4));
 				lista.add(cliente);
 				
 			}
