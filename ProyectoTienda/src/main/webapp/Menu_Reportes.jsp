@@ -54,19 +54,46 @@
             </ul>
 	   	</header>
 	   	
-	   	<div class="formulario">
+	   	<div class="formularioRep">
 	   		<h2>Consultas y Reportes</h2>
 	   		
 	   		<form action="">
-	   		<div id="botns_consultas2" >
-		   		<input class="btnConsUsu" type="button" value="Usuarios" >
-		   		<input class="btnConsCli" type="button" value="Clientes" >
-		   		<input class="btnConsProv" type="button" value="Proveedores" >
-		   		<input class="btnConsComp" type="button" value="Compras" >
-		   		<input class="btnCliComp" type="button" value="Compras por cliente" >
-		   		<input class="btnConsVta" type="button" value="Ventas" >
-		   		<input class="btnCliVent" type="button" value="Ventas por usuario" >
-	   		</div>
+		   		<div id="botns_consultas2" >
+		   			<div class="card">
+		   				<img alt="Usuarios" src="imgs/consulta-1.png" width="50px">
+			   			<input class="btnConsUsu" type="button" value="Usuarios" style="background : inherit; color: #0c331b;">
+			   		</div>
+			   		
+			   		<div class="card">
+			   			<img alt="Clientes" src="imgs/consulta-2.png" width="50px">
+			   			<input class="btnConsCli" type="button" value="Clientes" style="background : inherit; color: #0c331b;">
+			   		</div>
+			   		
+			   		<div class="card">
+			   			<img alt="Proveedores" src="imgs/consulta-3.png" width="50px">
+			   			<input class="btnConsProv" type="button" value="Proveedores" style="background : inherit; color: #0c331b;">
+			   		</div>
+			   		
+			   		<div class="card">
+			   			<img alt="Compras" src="imgs/consulta-4.png" width="50px">
+			   			<input class="btnConsComp" type="button" value="Compras" style="background : inherit; color: #0c331b;">
+			   		</div>	
+			   		
+			   		<div class="card">
+			   			<img alt="Compras Clientes" src="imgs/consulta-5.png" width="50px">
+			   			<input class="btnCliComp" type="button" value="Compras por cliente" style="background : inherit; color: #0c331b;">
+			   		</div>
+			   		
+			   		<div class="card">
+			   			<img alt="Ventas" src="imgs/Consulta-6.png" width="50px">
+			   			<input class="btnConsVta" type="button" value="Ventas" style="background : inherit; color: #0c331b;">
+			   		</div>
+			   		
+			   		<div class="card">
+			   			<img alt="Clientes" src="imgs/consulta-7.png" width="50px">
+			   			<input class="btnCliVent" type="button" value="Ventas por usuario" style="background : inherit; color: #0c331b;">
+		   			</div>
+		   		</div>
 	   		</form>
 
 	   		<div class="tabla_ConsGen">
