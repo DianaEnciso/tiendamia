@@ -9,6 +9,8 @@ public class ClientesDTO
 	private String email_clien;
 	private String telef_clien;
 	private double comp_cli;
+	private int cant_comp;
+	private int cod_vent;
 	
 	
 	
@@ -24,7 +26,16 @@ public class ClientesDTO
 		this.telef_clien = telef_clien;
 	}
 
-
+	
+	// constructor para buscar cliente y valor/codigo de compra
+	public ClientesDTO(int cod_vent, int cedula_clien, String nombre_clien, double comp_cli) {
+		super();
+		this.cod_vent = cod_vent;
+		this.cedula_clien = cedula_clien;
+		this.nombre_clien = nombre_clien;
+		this.comp_cli = comp_cli;
+	}
+	
 	
 //CONSTRUCTOR PARA BUSCAR POR CEDULA DE CLIENTE//
 	public ClientesDTO(int cedula_clien) 
@@ -34,6 +45,17 @@ public class ClientesDTO
 	}
 
 
+
+
+//constructor para reporte ventas por cliente
+	public ClientesDTO(int cedula_clien, String nombre_clien, double comp_cli, int cant_comp) {
+	super();
+	this.cedula_clien = cedula_clien;
+	this.nombre_clien = nombre_clien;
+	this.comp_cli = comp_cli;
+	this.cant_comp = cant_comp;
+}
+
 	public ClientesDTO(int cedula_clien, String nombre_clien, double comp_cli) {
 	super();
 	this.cedula_clien = cedula_clien;
@@ -42,8 +64,26 @@ public class ClientesDTO
 }
 
 
-	
-	
+
+	public int getCant_comp() {
+		return cant_comp;
+	}
+
+
+	public void setCant_comp(int cant_comp) {
+		this.cant_comp = cant_comp;
+	}
+
+
+	public int getCod_vent() {
+		return cod_vent;
+	}
+
+
+	public void setCod_vent(int cod_vent) {
+		this.cod_vent = cod_vent;
+	}
+
 
 	public double getComp_cli() {
 		return comp_cli;

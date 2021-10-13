@@ -170,7 +170,7 @@ public UsuariosDTO consultarUnUsuario(UsuariosDTO us)
 		return dat;
 
 }
-	
+	//consulta general usuarios
 	public ArrayList<UsuariosDTO> ConsGenUsu(){
 		
 		ArrayList<UsuariosDTO> lista=new ArrayList<UsuariosDTO>();
@@ -187,4 +187,45 @@ public UsuariosDTO consultarUnUsuario(UsuariosDTO us)
 		}
 		return lista;
 	}
+	
+	//consulta ventas lista larga
+			public ArrayList<UsuariosDTO> ConsVntGen(){
+				
+				ArrayList<UsuariosDTO> lista=new ArrayList<UsuariosDTO>();
+
+				try {
+					ps=cnn.prepareStatement("SELECT V.codigo_venta AS codigo_venta, U.cedula_usuario AS cedula_usuario, U.nombre_usuario AS nombre_usuario, V.valor_venta AS valor_venta FROM usuarios AS U, ventas AS V WHERE (U.cedula_usuario = V.cedula_usuario);");
+					rs=ps.executeQuery();
+					while(rs.next()) {
+						usu = new UsuariosDTO(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getDouble(4));
+						lista.add(usu);
+					}
+					//JOptionPane.showMessageDialog(null,"en el dao " + lista.size());
+							
+				} catch (SQLException e) {
+					JOptionPane.showMessageDialog(null, "Error al hacer consulta cruzada de clientes y ventas: "+ e);
+				}
+				return lista;
+			}
+		
+		 //consulta ventas por usuarios
+		
+		public ArrayList<UsuariosDTO> ConsVtaUsu(){
+			
+			ArrayList<UsuariosDTO> lista=new ArrayList<UsuariosDTO>();
+			
+			try {
+				ps=cnn.prepareStatement("SELECT U.cedula_usuario AS cedula_usuario, U.nombre_usuario AS nombre_usuario, V.valor_venta AS valor_venta FROM usuarios AS U, ventas AS V WHERE (U.cedula_usuario = V.cedula_usuario);");
+				rs=ps.executeQuery();
+				while(rs.next()) {
+					usu=new UsuariosDTO(rs.getInt(1), rs.getString(2), rs.getDouble(3));
+					lista.add(usu);
+				}
+			} catch (SQLException e) {
+				JOptionPane.showMessageDialog(null,"Error al hacer la consulta cruzada de usuarios y venta " + e);
+			}
+			
+			
+			return lista;
+		}
 }
