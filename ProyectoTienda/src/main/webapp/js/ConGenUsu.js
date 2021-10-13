@@ -128,6 +128,7 @@ function consultarproveedores()
 var total= 0;
 
 function consultarcompras(){
+	
   $.ajax({
     url: "ConGenVent",
     type: "POST",
@@ -150,8 +151,8 @@ function consultarcompras(){
                   <td>${i.nombre_clien}</td>
                   <td>${i.comp_cli}</td>
                 </tr>`;
-        total+=i.comp_cli;
         
+        total+=i.comp_cli;
       }
       tab.innerHTML+=` 
         <tr>

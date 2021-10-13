@@ -236,7 +236,7 @@ public class VentaController extends HttpServlet {
 							x=detdao.RegistrarDetalleVenta(detdto);
 							
 								if(x) {
-									JOptionPane.showMessageDialog(null, "Detalle producto 1 registrado");
+									//JOptionPane.showMessageDialog(null, "Detalle producto 1 registrado");
 									}
 								else {
 									JOptionPane.showMessageDialog(null, "Detalle producto 1 no registrado");
@@ -252,7 +252,7 @@ public class VentaController extends HttpServlet {
 							x=detdao.RegistrarDetalleVenta(detdto);
 							
 								if(x) {
-									JOptionPane.showMessageDialog(null, "Detalle producto 2 registrado");
+									//JOptionPane.showMessageDialog(null, "Detalle producto 2 registrado");
 									}
 								else {
 									JOptionPane.showMessageDialog(null, "Detalle producto 2 no registrado");
@@ -269,7 +269,7 @@ public class VentaController extends HttpServlet {
 							x=detdao.RegistrarDetalleVenta(detdto);
 							
 								if(x) {
-									JOptionPane.showMessageDialog(null, "Detalle producto 3 registrado");
+									//JOptionPane.showMessageDialog(null, "Detalle producto 3 registrado");
 									}
 								else {
 									JOptionPane.showMessageDialog(null, "Detalle producto 3 no registrado");
