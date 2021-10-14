@@ -268,7 +268,7 @@ body{
 
 .tabla_ConsGen table {
 	width: 100%;
-	margin-top: 50px;
+	margin-top: 0;
 	border: 5px solid  #6c965efc;
 	margin-right: 120px;
 	text-align: center;
@@ -279,8 +279,6 @@ body{
 	color: white;
 	background-color:  #0C331B;
 	text-align: center;
-	
-	
 }
 
 .tabla_ConsGen td {

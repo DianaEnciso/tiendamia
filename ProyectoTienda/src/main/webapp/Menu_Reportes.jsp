@@ -91,7 +91,7 @@
 			   		
 			   		<div class="card">
 			   			<img alt="Ventas por usuario" src="imgs/Consulta-6.png" width="50px" >
-			   			<input class="btnUsuVta" type="button" value="Ventas por usuario" style="background : inherit; color: #0c331b;" title="Ventas por usuario">
+			   			<input class="btnUsuVta" type="button" value="Ventas por us" style="background : inherit; color: #0c331b;" title="Ventas por usuario">
 			   		</div>
 			   		
 		   		</div>
