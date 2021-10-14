@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Gestión de productos</title>
+<title>Gestión de Productos</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/Menu_Nav.css">
 <link rel="stylesheet" href="css/producto.css">
@@ -51,7 +51,7 @@
 	   	</header>
 	   	
 		<div class="formulario">
-			<h2>Gestión de productos</h2>
+			<h2>Gestión de Productos</h2>
 			<%
 			String c="", i="", n="", nom="", pc="", pv="";
 			if (request.getParameter("cod")!=null){

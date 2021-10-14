@@ -38,6 +38,10 @@ function consultarusuarios(){
 		let tab=document.getElementById('tabla');
 		tab.innerHTML='';
 		tab.innerHTML+=`<tr>
+							<th colspan="5" style="border-bottom:5px solid white; padding:10px; font-size:20px; font-weight:bold; letter-spacing:2px">USUARIOS</th>
+						</tr>
+						
+						<tr>
 							<th>Documento</th>
 							<th>Nombre</th>
 							<th>Correo</th>
@@ -69,6 +73,10 @@ function consultarclientes(){
 		let tab=document.getElementById('tabla');
 		tab.innerHTML='';
 		tab.innerHTML+=`<tr>
+							<th colspan="5" style="border-bottom:5px solid white; padding:10px; font-size:20px; font-weight:bold; letter-spacing:2px">CLIENTES</th>
+						</tr>	
+		
+						<tr>
 							<th>Documento</th>
 							<th>Nombre</th>
 							<th>Direccion</th>
@@ -103,12 +111,16 @@ function consultarproveedores()
 		let tab=document.getElementById('tabla');
 		tab.innerHTML='';
 		tab.innerHTML+=`<tr>
-							<th>NIT</th>
-								<th>Nombre</th>
-								<th>Ciudad</th>
-								<th>Direccion</th>
-								<th>Telefono</th>
-							</tr>`;
+							<th colspan="5" style="border-bottom:5px solid white; padding:10px; font-size:20px; font-weight:bold; letter-spacing:2px">PROVEEDORES</th>
+						</tr>
+		
+						<tr>
+						<th>NIT</th>
+							<th>Nombre</th>
+							<th>Ciudad</th>
+							<th>Direccion</th>
+							<th>Telefono</th>
+						</tr>`;
 							
 		for(let i of result)
 		{
@@ -138,11 +150,15 @@ function consultarcompras(){
     let tab=document.getElementById('tabla');
     tab.innerHTML='';
     tab.innerHTML+=`<tr>
-              <th>Codigo de venta</th>
-			  <th>Documento</th>
-              <th>Nombre</th>
-              <th>Valor Compras</th>
-            </tr>`;
+						<th colspan="5" style="border-bottom:5px solid white; padding:10px; font-size:20px; font-weight:bold; letter-spacing:2px">COMPRAS</th>
+					</tr>
+
+					<tr>
+		              <th>Codigo de venta</th>
+					  <th>Documento</th>
+		              <th>Nombre</th>
+		              <th>Valor Compras</th>
+		            </tr>`;
   
       for(let i of result){
         tab.innerHTML+=`<tr>
@@ -176,6 +192,10 @@ function consultarcompraclientes(){
 		let tab=document.getElementById('tabla');
 		tab.innerHTML='';
 		tab.innerHTML+=`<tr>
+							<th colspan="5" style="border-bottom:5px solid white; padding:10px; font-size:20px; font-weight:bold; letter-spacing:2px">COMPRAS CLIENTES</th>
+						</tr>
+		
+						<tr>
 							<th>Documento</th>
 							<th>Nombre del cliente</th>
 							<th>Cantidad de compras</th>
@@ -206,6 +226,10 @@ function consultarventas(){
 		let tab=document.getElementById('tabla');
 		tab.innerHTML='';
 		tab.innerHTML+=`<tr>
+							<th colspan="5" style="border-bottom:5px solid white; padding:10px; font-size:20px; font-weight:bold; letter-spacing:2px">VENTAS</th>
+						</tr>
+		
+						<tr>
 							<th>Codigo de venta</th>
 							<th>Documento</th>
 							<th>Nombre del usuario</th>
@@ -243,6 +267,10 @@ function consultarventausuarios(){
 		let tab=document.getElementById('tabla');
 		tab.innerHTML='';
 		tab.innerHTML+=`<tr>
+							<th colspan="5" style="border-bottom:5px solid white; padding:10px; font-size:20px; font-weight:bold; letter-spacing:2px">VENTAS POR USUARIO</th>
+						</tr>
+		
+						<tr>
 							<th>Documento</th>
 							<th>Nombre del usuario</th>
 							<th>Cantidad de ventas</th>

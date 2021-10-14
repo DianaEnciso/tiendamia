@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Gestión de ventas</title>
+<title>Gestión de Ventas</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/Menu_Nav.css">
 <link rel="stylesheet" href="css/venta.css">
@@ -57,7 +57,7 @@
 		    		<div>
 			    		<label for="cedula" style="margin-left: 60px; font-size: 16px;">Cédula</label>
 			    		<div class="consult_cedula">
-				    		<input type="text" id="cedula" name="cedula" value="${cliente.getCedula_clien()}">
+				    		<input type="text" id="cedula" name="cedula" value="${cliente.getCedula_clien()}" required>
 				    		<input type="submit" value="Consultar" name="consultar">
 			    		</div>
 		    		</div>

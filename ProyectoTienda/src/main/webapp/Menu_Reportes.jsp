@@ -60,44 +60,44 @@
 	   		<form action="">
 		   		<div id="botns_consultas2" >
 		   			<div class="card">
-		   				<img alt="Usuarios" src="imgs/consulta-1.png" width="50px" title="Usuarios">
-			   			<input class="btnConsUsu" type="button" value="Usuarios" style="background : inherit; color: #0c331b;">
+		   				<img alt="Usuarios" src="imgs/consulta-1.png" width="50px" >
+			   			<input class="btnConsUsu" type="button" value="Usuarios" style="background : inherit; color: #0c331b;" title="Usuarios">
 			   		</div>
 			   		
 			   		<div class="card">
-			   			<img alt="Clientes" src="imgs/consulta-2.png" width="50px" title="Clientes">
-			   			<input class="btnConsCli" type="button" value="Clientes" style="background : inherit; color: #0c331b;">
+			   			<img alt="Clientes" src="imgs/consulta-2.png" width="50px" >
+			   			<input class="btnConsCli" type="button" value="Clientes" style="background : inherit; color: #0c331b;" title="Clientes">
 			   		</div>
 			   		
 			   		<div class="card">
-			   			<img alt="Proveedores" src="imgs/consulta-3.png" width="50px" title="Proveedores">
-			   			<input class="btnConsProv" type="button" value="Proveedores" style="background : inherit; color: #0c331b;">
+			   			<img alt="Proveedores" src="imgs/consulta-3.png" width="50px" >
+			   			<input class="btnConsProv" type="button" value="Proveedores" style="background : inherit; color: #0c331b;" title="Proveedores">
 			   		</div>
 			   		
 			   		<div class="card">
-			   			<img alt="Compras" src="imgs/consulta-4.png" width="50px" title="Compras">
-			   			<input class="btnConsComp" type="button" value="Compras" style="background : inherit; color: #0c331b;">
+			   			<img alt="Compras" src="imgs/consulta-4.png" width="50px" >
+			   			<input class="btnConsComp" type="button" value="Compras" style="background : inherit; color: #0c331b;" title="Compras">
 			   		</div>	
 			   		
 			   		<div class="card">
-			   			<img alt="Compras por clientes" src="imgs/consulta-7.png" width="50px" title="Compras por cliente">
-			   			<input class="btnCliComp" type="button" value="Compras por cliente" style="background : inherit; color: #0c331b;">
+			   			<img alt="Compras por clientes" src="imgs/consulta-7.png" width="50px" >
+			   			<input class="btnCliComp" type="button" value="Compras por cliente" style="background : inherit; color: #0c331b;" title="Compras por cliente">
 		   			</div>
 		   			
 			   		<div class="card">
-			   			<img alt="Ventas" src="imgs/consulta-5.png" width="50px" title="Ventas">
-			   			<input class="btnConsVta" type="button" value="Ventas" style="background : inherit; color: #0c331b;">
+			   			<img alt="Ventas" src="imgs/consulta-5.png" width="50px">
+			   			<input class="btnConsVta" type="button" value="Ventas" style="background : inherit; color: #0c331b;" title="Ventas">
 			   		</div>
 			   		
 			   		<div class="card">
-			   			<img alt="Ventas por usuario" src="imgs/Consulta-6.png" width="50px" title="Ventas por usuario">
-			   			<input class="btnUsuVta" type="button" value="Ventas por usuario" style="background : inherit; color: #0c331b;">
+			   			<img alt="Ventas por usuario" src="imgs/Consulta-6.png" width="50px" >
+			   			<input class="btnUsuVta" type="button" value="Ventas por usuario" style="background : inherit; color: #0c331b;" title="Ventas por usuario">
 			   		</div>
 			   		
 		   		</div>
 	   		</form>
 
-	   		<div class="tabla_ConsGen">
+	   		<div class="tabla_ConsGen" style="height:200px; overflow-y:auto; margin-top:20px;">
 	   			<table  id="tabla"></table>
   			</div>
 	   	</div>

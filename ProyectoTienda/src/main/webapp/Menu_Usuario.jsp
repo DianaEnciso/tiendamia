@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Gestión de usuarios</title>
+<title>Gestión de Usuarios</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/Menu_Nav.css">
 <link rel="stylesheet" href="css/usuario.css">
@@ -51,7 +51,7 @@
 	   	</header>
 	   	
 		<div class="formulario">
-		    <h2>Gestión de usuarios</h2>
+		    <h2>Gestión de Usuarios</h2>
     	
 			<%
 				String ced="",corr="",name="",pass="",usu="";

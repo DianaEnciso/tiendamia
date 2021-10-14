@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Gestión de proveedores</title>
+<title>Gestión de Proveedores</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/Menu_Nav.css">
 <link rel="stylesheet" href="css/proveedor.css">
@@ -53,7 +53,7 @@
         
 		<div class="formulario">
 
-			<h2>Gestión de proveedores</h2>
+			<h2>Gestión de Proveedores</h2>
 
 			<%
 			String nit="",nombre="",ciudad="",direccion="",tele="";
