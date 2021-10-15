@@ -1,0 +1,59 @@
+@charset "ISO-8859-1";
+
+.factura {
+	border: 2px solid #0C331B;
+	margin: 0 auto;
+	width: 40%;
+	margin-top: 50px;
+	padding: 10px;
+}
+
+h1 {
+	text-align: center;
+}
+
+.informacion_factura, .datosG_factura {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 10px 0 10px 12px;
+}
+
+.datosG_factura {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 10px 0 10px 12px;
+}
+
+th {
+	padding: 5px 12px;
+	text-align: center;
+}
+ 
+td {
+	padding: 5px 12px;
+	text-align: center;
+}
+
+.ced_udu input {
+	margin: 30px 0px 0px 700px;
+}
+
+.btn1 {
+	cursor: pointer;
+	margin: 0 10px;
+	padding: 10px 30px;
+	border-radius: 5px;
+	background-color: #6c965efc;
+	border-style: none;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.btn1:hover  {
+	background-color: #416137fc;
+}
+/*.consecutivo {
+	margin-left: 200px;
+}*/

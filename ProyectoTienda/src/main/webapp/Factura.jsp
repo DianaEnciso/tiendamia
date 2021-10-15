@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Factura</title>
+<link rel="stylesheet" href="css/factura.css">
 </head>
 <body>
 
@@ -38,76 +39,82 @@ String tiva = request.getSession().getAttribute("tiva").toString();
 String pagar = request.getSession().getAttribute("pagar").toString();
 
 %>
-
-<h1>Factura :</h1>
-<label><%=cons%></label>
-
-<label style="margin-left: 60px; font-size: 16px;">Fecha: </label>
-<label><%=fe%></label>
-
-<label for="cedula" style="margin-left: 60px; font-size: 16px;">Cédula: </label>
-<label><%=ced_c%></label>
-
-<label for="cliente" style="margin-left: 60px; font-size: 16px;">Cliente: </label>
-<label><%=nom_c%></label>
-
-<label for="cedula" style="margin-left: 60px; font-size: 16px;">Vendedor: </label>
-<label><%=nom_u%></label>
-
-
-
-<table class="table_form">
-  		<tr>
-  			<th style="font-weight: bold;"><label style="margin-left: 0px; font-size: 16px;">Código producto</label></th>
-  			<th style="font-weight: bold"><label style="margin-left: 0px; font-size: 16px;">Nombre Producto</label></th>
-  			<th style="font-weight: bold"><label style="margin-left: 0px; font-size: 16px;">Valor unitario</label></th>
-  			<th style="font-weight: bold"><label style="margin-left: 0px; font-size: 16px;">Cantidad</label></th>
-  			<th style="font-weight: bold"><label style="margin-left: 0px; font-size: 16px;">Valor total</label></th>		    		
-  		</tr>
-  		
-   		<tr>
-   			<td><label><%=cod_1%></label></td>
-   			<td><label><%=nom_p1%></label></td>
-   			<td><label><%=pv_1%></label></td>
-   			<td><label><%=cant_1%></label></td>
-   			<td><label><%=sbt_1%></label></td>   		
-   		</tr>
-   		
-   		<tr>
-   			<td><label><%=cod_2%></label></td>
-   			<td><label><%=nom_p2%></label></td>
-   			<td><label><%=pv_2%></label></td>
-   			<td><label><%=cant_2%></label></td>
-   			<td><label><%=sbt_2%></label></td>   		
-   		</tr>
-   		
-   		<tr>
-   			<td><label><%=cod_3%></label></td>
-   			<td><label><%=nom_p3%></label></td>
-   			<td><label><%=pv_3%></label></td>
-   			<td><label><%=cant_3%></label></td>
-   			<td><label><%=sbt_3%></label></td>   		
-   		</tr>
-
-   		<tr>
-   			<td colspan="5" style="text-align: right; font-weight: bold;">Total valor de Venta &nbsp&nbsp&nbsp</td>
-   			<td><label><%=stt%></label></td>	    			
-   		</tr>
-   		
-   		<tr>
-   			<td colspan="5" style="text-align: right; font-weight: bold;">Total IVA &nbsp&nbsp&nbsp</td>
-   			<td><label><%=tiva%></label></td>	    			
-		</tr>
-    		
-   		<tr>
-   			<td colspan="5" style="text-align: right; font-weight: bold; font-size: 20px;">Valor a pagar &nbsp&nbsp</td>
-   			<td><label><%=pagar%></label></td>	    			
-   		</tr>
-</table>
+<div class="factura">
+	<h1>Factura de Venta MinFruver</h1>
+	
+	<div class="informacion_factura">
+		<label class="consecutivo">Consecutivo: </label>
+		<label><%=cons%></label>
+		<label class="fechaHora" style="margin-left: 50px; font-size: 16px;">Fecha y hora: </label>
+		<label><%=fe%></label>
+		<img alt="Logo" src="imgs/logo-02.png" width="100px" style="margin-left: 110px;">
+	</div>
+	
+	<div class="datosG_factura">
+		<label for="cedula" >Cédula: </label>
+		<label><%=ced_c%></label>
+		
+		<label for="cliente" style="margin-left: 60px; font-size: 16px;">Cliente: </label>
+		<label><%=nom_c%></label>
+		
+		<label for="vendedor" style="margin-left: 60px; font-size: 16px;">Vendedor: </label>
+		<label><%=nom_u%></label>
+	</div>
+	
+	
+	<table class="table_form">
+	  		<tr>
+	  			<th>Código producto</th>
+	  			<th>Nombre producto</th>
+	  			<th>Valor unitario</th>
+	  			<th>Cantidad</th>
+	  			<th>Valor total</th>		    		
+	  		</tr>
+	  		
+	   		<tr>
+	   			<td><%=cod_1%></td>
+	   			<td><%=nom_p1%></td>
+	   			<td><%=pv_1%></td>
+	   			<td><%=cant_1%></td>
+	   			<td><%=sbt_1%></td>   		
+	   		</tr>
+	   		
+	   		<tr>
+	   			<td><%=cod_2%></td>
+	   			<td><%=nom_p2%></td>
+	   			<td><%=pv_2%></td>
+	   			<td><%=cant_2%></td>
+	   			<td><%=sbt_2%></td>   		
+	   		</tr>
+	   		
+	   		<tr>
+	   			<td><%=cod_3%></td>
+	   			<td><%=nom_p3%></td>
+	   			<td><%=pv_3%></td>
+	   			<td><%=cant_3%></td>
+	   			<td><%=sbt_3%></td>   		
+	   		</tr>
+	
+	   		<tr>
+	   			<td colspan="4" style="text-align: right; font-weight: bold;">Total valor de Venta &nbsp&nbsp&nbsp</td>
+	   			<td><label><%=stt%></label></td>	    			
+	   		</tr>
+	   		
+	   		<tr>
+	   			<td colspan="4" style="text-align: right; font-weight: bold;">Total IVA &nbsp&nbsp&nbsp</td>
+	   			<td><label><%=tiva%></label></td>	    			
+			</tr>
+	    		
+	   		<tr>
+	   			<td colspan="4" style="text-align: right; font-weight: bold; font-size: 20px;">Valor a pagar &nbsp&nbsp</td>
+	   			<td><label><%=pagar%></label></td>	    			
+	   		</tr>
+	</table>
+</div>
 
  <form action="VentaController" method="post" class="userForm1">
 	<div class="ced_udu">
-		<input type="submit" name="reset" value="Finalizar">
+		<input type="submit" name="reset" value="Finalizar" class="btn1">
 	</div>
 </form>	
 	    		
