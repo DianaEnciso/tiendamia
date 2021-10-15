@@ -77,7 +77,7 @@ public class StoreController extends HttpServlet
 			
 			if(corr.equals("") || name.equals("") || pass.equals("") || usu.equals(""))
 			{
-				JOptionPane.showMessageDialog(null, "Por favor rellene todos los campos");
+				//JOptionPane.showMessageDialog(null, "Por favor rellene todos los campos");
 				response.sendRedirect("Menu_Usuario.jsp");
 				
 			}
@@ -89,13 +89,13 @@ public class StoreController extends HttpServlet
 				
 				if(respu==true)
 				{
-					JOptionPane.showMessageDialog(null, "Usuario registrado");
+					//JOptionPane.showMessageDialog(null, "Usuario registrado");
 					response.sendRedirect("Menu_Usuario.jsp");
 				}
 				
 				else
 				{
-					JOptionPane.showMessageDialog(null, "Usuario no registrado");
+					//JOptionPane.showMessageDialog(null, "Usuario no registrado");
 					response.sendRedirect("Menu_Usuario.jsp");
 				}
 				
@@ -127,12 +127,12 @@ public class StoreController extends HttpServlet
 			usu=guardato.getUsuario();
 			
 			response.sendRedirect("Menu_Usuario.jsp?ce="+cedu+"&&co="+corr+"&&no="+name+"&&cl="+pass+"&&us="+usu);
-			JOptionPane.showMessageDialog(null, "Usuario consultado y encontrado");
+			//JOptionPane.showMessageDialog(null, "Usuario consultado y encontrado");
 			}
 			
 			else
 			{
-				JOptionPane.showMessageDialog(null, "El usuario NO existe en la base de datos");
+				//JOptionPane.showMessageDialog(null, "El usuario NO existe en la base de datos");
 				response.sendRedirect("Menu_Usuario.jsp");
 			}
 		
@@ -159,13 +159,13 @@ public class StoreController extends HttpServlet
 			
 			if(dat==true)
 			{
-				JOptionPane.showMessageDialog(null, "El usuario ha sido actualizado");
+				//JOptionPane.showMessageDialog(null, "El usuario ha sido actualizado");
 				response.sendRedirect("Menu_Usuario.jsp");
 			
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(null, "El usuario no pudo ser actualizado");
+				//JOptionPane.showMessageDialog(null, "El usuario no pudo ser actualizado");
 				response.sendRedirect("Menu_Usuario.jsp");
 			}
 			
@@ -185,14 +185,14 @@ public class StoreController extends HttpServlet
 			
 			if(e>0)
 			{
-				JOptionPane.showMessageDialog(null, "El usuario fue eliminado");
+				//JOptionPane.showMessageDialog(null, "El usuario fue eliminado");
 				response.sendRedirect("Menu_Usuario.jsp");
 				
 				
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(null, "El usuario no pudo ser eliminado");
+				//JOptionPane.showMessageDialog(null, "El usuario no pudo ser eliminado");
 				response.sendRedirect("Menu_Usuario.jsp");
 			
 			

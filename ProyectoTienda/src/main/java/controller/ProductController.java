@@ -75,7 +75,7 @@ public class ProductController extends HttpServlet {
 				response.sendRedirect("Menu_Productos.jsp?cod="+cod+"&&nom="+nom+"&&nit="+n+"&&prec_c="+pc+"&&iva="+i+"&&prec_v="+pv);
 			}
 			else {
-				JOptionPane.showMessageDialog(null, "El producto no se encuentra registrado.");
+				//JOptionPane.showMessageDialog(null, "El producto no se encuentra registrado.");
 				response.sendRedirect("Menu_Productos.jsp");
 			}
 		}
@@ -94,11 +94,11 @@ public class ProductController extends HttpServlet {
 			res = proddao.ActualizarProductos(proddto);
 			
 			if(res) {
-				JOptionPane.showMessageDialog(null, "Producto actualizado.");
+				//JOptionPane.showMessageDialog(null, "Producto actualizado.");
 				response.sendRedirect("Menu_Productos.jsp");
 			}
 			else {
-				JOptionPane.showMessageDialog(null, "Producto no actualizado.");
+				//JOptionPane.showMessageDialog(null, "Producto no actualizado.");
 				response.sendRedirect("Menu_Productos.jsp");
 			}
 			
@@ -106,8 +106,8 @@ public class ProductController extends HttpServlet {
 			
 		Part archivo= request.getPart("archivo");
 		//RUTA DE DIANA
-		String Url="C:\\\\Users\\\\diana\\\\git\\\\repository2\\\\ProyectoTienda\\\\src\\\\main\\\\webapp\\\\documentos\\\\"; 
-		
+		//String Url="C:\\\\Users\\\\diana\\\\git\\\\repository2\\\\ProyectoTienda\\\\src\\\\main\\\\webapp\\\\documentos\\\\"; 
+		String Url="C:\\\\Users\\\\profe\\\\git\\\\tiendamia\\\\ProyectoTienda\\\\src\\\\main\\\\webapp\\\\documentos";
 					
 		if(request.getParameter("subircsv")!=null) {
 			//JOptionPane.showMessageDialog(null, "cargar oprimido");
@@ -131,13 +131,13 @@ public class ProductController extends HttpServlet {
 			x=prodao.cargarCSV(Url + "listaProductos.csv");
 			
 			if(x) {
-				JOptionPane.showMessageDialog(null, "Datos cargados en la bd");				
+				//JOptionPane.showMessageDialog(null, "Datos cargados en la bd");				
 			} else {
-				JOptionPane.showMessageDialog(null, "No se cargaron los datos");
+				//JOptionPane.showMessageDialog(null, "No se cargaron los datos");
 			}
 			}
 			catch(Exception e) {
-				JOptionPane.showMessageDialog(null, "error al cargar el archivo " +e);
+				//JOptionPane.showMessageDialog(null, "error al cargar el archivo " +e);
 			}
 			response.sendRedirect("Menu_Productos.jsp");	
 			}	

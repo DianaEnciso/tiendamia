@@ -28,7 +28,7 @@ public class VentasDAO {
 		    }
 		    
 		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(null,"Error al consultar el codigo de la última venta: " + e);
+			//JOptionPane.showMessageDialog(null,"Error al consultar el codigo de la última venta: " + e);
 		}
 		return codven;
 	}
@@ -53,7 +53,7 @@ public class VentasDAO {
 			}
 					
 		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(null,"Error al registrar la venta" + e);
+			//JOptionPane.showMessageDialog(null,"Error al registrar la venta" + e);
 		}
 		return res;		
 	}

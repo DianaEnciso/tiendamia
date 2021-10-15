@@ -39,7 +39,7 @@ public boolean Ingresosistema(UsuariosDTO us) {
 		}
 		
 	} catch (SQLException e) {
-		JOptionPane.showMessageDialog(null, "Error al validar el usuario" + e);
+		//JOptionPane.showMessageDialog(null, "Error al validar el usuario" + e);
 	}
 		
 	return false;
@@ -71,7 +71,7 @@ public boolean insertarusuario(UsuariosDTO us)
 		
 	} catch (SQLException e) 
 	{
-		JOptionPane.showMessageDialog(null, "El usuario ya se encuentra registrado");
+		//JOptionPane.showMessageDialog(null, "El usuario ya se encuentra registrado");
 		e.printStackTrace();
 	}
 	
@@ -105,7 +105,7 @@ public UsuariosDTO consultarUnUsuario(UsuariosDTO us)
 		
 	} catch (SQLException e) 
 	{
-		JOptionPane.showMessageDialog(null, "Error al consultar el usuario " + e);
+		//JOptionPane.showMessageDialog(null, "Error al consultar el usuario " + e);
 		e.printStackTrace();
 		
 	}
@@ -132,7 +132,7 @@ public UsuariosDTO consultarUnUsuario(UsuariosDTO us)
 	
 	{
 		
-		JOptionPane.showMessageDialog(null, "Error al eliminar el usuario " + e);
+		//JOptionPane.showMessageDialog(null, "Error al eliminar el usuario " + e);
 		e.printStackTrace();
 		
 	}
@@ -183,7 +183,7 @@ public UsuariosDTO consultarUnUsuario(UsuariosDTO us)
 			}
 		
 		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(null,"Error al hacer la consulta general de usuarios: " + e);
+			//JOptionPane.showMessageDialog(null,"Error al hacer la consulta general de usuarios: " + e);
 		}
 		return lista;
 	}
@@ -203,7 +203,7 @@ public UsuariosDTO consultarUnUsuario(UsuariosDTO us)
 					//JOptionPane.showMessageDialog(null,"en el dao " + lista.size());
 							
 				} catch (SQLException e) {
-					JOptionPane.showMessageDialog(null, "Error al hacer consulta cruzada de clientes y ventas: "+ e);
+					//JOptionPane.showMessageDialog(null, "Error al hacer consulta cruzada de clientes y ventas: "+ e);
 				}
 				return lista;
 			}
@@ -222,7 +222,7 @@ public UsuariosDTO consultarUnUsuario(UsuariosDTO us)
 					lista.add(usu);
 				}
 			} catch (SQLException e) {
-				JOptionPane.showMessageDialog(null,"Error al hacer la consulta cruzada de usuarios y venta " + e);
+				//JOptionPane.showMessageDialog(null,"Error al hacer la consulta cruzada de usuarios y venta " + e);
 			}
 			
 			

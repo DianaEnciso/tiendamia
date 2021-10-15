@@ -30,7 +30,7 @@ public class ProductosDAO {
 				cons = new ProductosDTO(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getString(4),rs.getInt(5),rs.getInt(6));				
 			}
 		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(null, "Error al consultar el producto: " + e);
+			//JOptionPane.showMessageDialog(null, "Error al consultar el producto: " + e);
 		}
 		
 		return cons;
@@ -56,7 +56,7 @@ public class ProductosDAO {
 					dato = true;
 				}
 			} catch (SQLException e) {
-				JOptionPane.showMessageDialog(null, "Error al actualizar producto: " + e);
+				//JOptionPane.showMessageDialog(null, "Error al actualizar producto: " + e);
 			}
 		
 		return dato;
@@ -72,7 +72,7 @@ public class ProductosDAO {
 			result=ps.executeUpdate()>0;
 			
 		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(null, "Error en DAO al registrar " +e);
+			//JOptionPane.showMessageDialog(null, "Error en DAO al registrar " +e);
 			e.printStackTrace();
 		}
 		

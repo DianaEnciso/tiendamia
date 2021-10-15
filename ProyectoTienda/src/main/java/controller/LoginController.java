@@ -81,13 +81,13 @@ public class LoginController extends HttpServlet {
 					UsuariosDAO usudao = new UsuariosDAO();
 					eladmin = new UsuariosDTO(ced);
 					usudao.eliminarusuario(eladmin);
-					JOptionPane.showMessageDialog(null, "Recuerde crear al menos un usuario.\nEl acceso con este usuario provisional será deshabilitado.");
+					//JOptionPane.showMessageDialog(null, "Recuerde crear al menos un usuario.\nEl acceso con este usuario provisional será deshabilitado.");
 				}
 				
 				response.sendRedirect("home.jsp");
 			}
 			else {
-				JOptionPane.showMessageDialog(null, "Datos incorrectos\nIntente de nuevo","ERROR_MESSAGE", JOptionPane.ERROR_MESSAGE);
+				//JOptionPane.showMessageDialog(null, "Datos incorrectos\nIntente de nuevo","ERROR_MESSAGE", JOptionPane.ERROR_MESSAGE);
 				response.sendRedirect("index.jsp");
 			}
 		}

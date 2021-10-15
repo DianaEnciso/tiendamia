@@ -45,7 +45,7 @@ public class ClientesDAO
 			
 		} catch (SQLException e) 
 		{
-			JOptionPane.showMessageDialog(null, "El cliente ya se encuentra registrado");
+			//JOptionPane.showMessageDialog(null, "El cliente ya se encuentra registrado");
 			e.printStackTrace();
 		}
 		return dato;
@@ -72,7 +72,7 @@ public class ClientesDAO
 			
 		} catch (SQLException e) 
 		{
-			JOptionPane.showMessageDialog(null, "Error al consultar el cliente " + e);
+			//JOptionPane.showMessageDialog(null, "Error al consultar el cliente " + e);
 			e.printStackTrace();
 		}
 		
@@ -95,7 +95,7 @@ public class ClientesDAO
 		
 		} catch (SQLException e) 
 		{
-			JOptionPane.showMessageDialog(null, "Error al eliminar el cliente " + e);
+			//JOptionPane.showMessageDialog(null, "Error al eliminar el cliente " + e);
 			e.printStackTrace();
 		}
 		
@@ -147,7 +147,7 @@ public class ClientesDAO
 			}
 		
 		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(null,"Error al hacer la consulta general de clientes: " + e);
+			//JOptionPane.showMessageDialog(null,"Error al hacer la consulta general de clientes: " + e);
 		}
 		return lista;
 	}
@@ -169,7 +169,7 @@ public class ClientesDAO
 			
 					
 		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(null, "Error al hacer consulta cruzada: "+ e);
+			//JOptionPane.showMessageDialog(null, "Error al hacer consulta cruzada: "+ e);
 		}
 		return lista;
 	}

@@ -63,7 +63,7 @@ public class ProveeController extends HttpServlet {
 			
 			if(name.equals("") || city.equals("") || address.equals("") || tele.equals(""))
 			{
-				JOptionPane.showMessageDialog(null, "Por favor rellene todos los campos");
+				//JOptionPane.showMessageDialog(null, "Por favor rellene todos los campos");
 				response.sendRedirect("Menu_Proveedores.jsp");
 				
 			}
@@ -76,12 +76,12 @@ public class ProveeController extends HttpServlet {
 				
 				if(respu==true)
 				{
-					JOptionPane.showMessageDialog(null, "Proveedor registrado");
+					//JOptionPane.showMessageDialog(null, "Proveedor registrado");
 					response.sendRedirect("Menu_Proveedores.jsp");
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "Proveedor no registrado");
+					//JOptionPane.showMessageDialog(null, "Proveedor no registrado");
 					response.sendRedirect("Menu_Proveedores.jsp");
 				}
 			}
@@ -110,11 +110,11 @@ public class ProveeController extends HttpServlet {
 				tele=proguard.getTele();
 				
 				response.sendRedirect("Menu_Proveedores.jsp?nit="+num_nit+"&&ciu="+city+"&&dir="+address+"&&nom="+name+"&&tel="+tele);
-				JOptionPane.showMessageDialog(null, "Proveedor consultado y encontrado");
+				//JOptionPane.showMessageDialog(null, "Proveedor consultado y encontrado");
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(null, "El proveedor no existe en la base de datos");
+				//JOptionPane.showMessageDialog(null, "El proveedor no existe en la base de datos");
 				response.sendRedirect("Menu_Proveedores.jsp");
 			}
 			
@@ -140,12 +140,12 @@ public class ProveeController extends HttpServlet {
 			
 			if(dato=true)
 			{
-				JOptionPane.showMessageDialog(null, "El proveedor ha sido actualizado");
+				//JOptionPane.showMessageDialog(null, "El proveedor ha sido actualizado");
 				response.sendRedirect("Menu_Proveedores.jsp");
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(null, "El proveedor no pudo ser actualizado");
+				//JOptionPane.showMessageDialog(null, "El proveedor no pudo ser actualizado");
 				response.sendRedirect("Menu_Proveedores.jsp");
 			}
 		}
@@ -163,12 +163,12 @@ public class ProveeController extends HttpServlet {
 			
 			if(p>0)
 			{
-				JOptionPane.showMessageDialog(null, "El proveedor fue eliminado");
+				//JOptionPane.showMessageDialog(null, "El proveedor fue eliminado");
 				response.sendRedirect("Menu_Proveedores.jsp");
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(null, "El proveedor no pudo ser eliminado");
+				//JOptionPane.showMessageDialog(null, "El proveedor no pudo ser eliminado");
 				response.sendRedirect("Menu_Proveedores.jsp");
 			}
 		}

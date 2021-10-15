@@ -35,7 +35,7 @@ public class DetVentaDAO {
 			}
 		
 		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(null,"Error al registrar el detalle de venta: " + e);
+			//JOptionPane.showMessageDialog(null,"Error al registrar el detalle de venta: " + e);
 		}
 		
 		return res;

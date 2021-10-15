@@ -44,7 +44,7 @@ public class ProveedoresDAO
 			
 		} catch (SQLException e) 
 		{
-			JOptionPane.showMessageDialog(null, "El proveedor ya se encuentra registrado");
+			//JOptionPane.showMessageDialog(null, "El proveedor ya se encuentra registrado");
 			e.printStackTrace();
 		}
 		return dato;
@@ -72,7 +72,7 @@ public class ProveedoresDAO
 			
 		} catch (SQLException e) 
 		{
-			JOptionPane.showMessageDialog(null, "Error al consultar el proveedor" + e);
+			//JOptionPane.showMessageDialog(null, "Error al consultar el proveedor" + e);
 			e.printStackTrace();
 		}
 		
@@ -130,7 +130,7 @@ public class ProveedoresDAO
 			
 		} catch (SQLException e) 
 		{
-			JOptionPane.showMessageDialog(null, "Error al eliminar el proveedor " + e);
+			//JOptionPane.showMessageDialog(null, "Error al eliminar el proveedor " + e);
 			e.printStackTrace();
 		}
 		

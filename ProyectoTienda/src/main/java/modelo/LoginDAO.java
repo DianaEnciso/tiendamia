@@ -30,7 +30,7 @@ public class LoginDAO {
 				usu=new UsuariosDTO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4),rs.getString(5));
 			}
 		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(null,"Error al validar el usuario" + e);
+			//JOptionPane.showMessageDialog(null,"Error al validar el usuario" + e);
 		}
 		
 		return usu;

@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -60,7 +62,7 @@ public class VentaController extends HttpServlet {
 			
 			ced_u = Integer.parseInt(request.getParameter("ced_u"));
 			nom_u = request.getParameter("nom_u");
-			
+			sesion.setAttribute("nom_u", nom_u);
 			ClientesDTO cliente;
 			ClientesDAO clidao = new ClientesDAO();
 			ClientesDTO clidto = new ClientesDTO(ced_c);
@@ -69,12 +71,15 @@ public class VentaController extends HttpServlet {
 			if(cliente != null) {
 				sesion.setAttribute("cliente", cliente);
 				request.getRequestDispatcher("Menu_Ventas.jsp").forward(request, response);
-				nom_c = cliente.getNombre_clien();
 			} else {
 				JOptionPane.showMessageDialog(null, "Cliente no esta registrado\n             Regístrelo");
 				response.sendRedirect("Menu_Cliente.jsp?ced="+ced_c+"&&dire="+dir+"&&ema="+cor+"&&nam="+nom+"&&tel="+tel);
 				
 			}			
+			ced_c=cliente.getCedula_clien();
+			sesion.setAttribute("ced_c", ced_c);
+			nom_c = cliente.getNombre_clien();
+			sesion.setAttribute("nom_c", nom_c);
 		}
 		
 		//CONSULTA DE PRODUCTOS
@@ -85,6 +90,7 @@ public class VentaController extends HttpServlet {
 		ProductosDTO prodto;
 		
 		cod1 = Integer.parseInt(request.getParameter("cod1"));
+		sesion.setAttribute("cod_1", cod1);
 		prodao = new ProductosDAO();
 		prodto = new ProductosDTO(cod1);
 		prod1 = prodao.ConsultarProducto(prodto);
@@ -101,9 +107,11 @@ public class VentaController extends HttpServlet {
 		
 		
 		nom_p1 = prod1.getNom_prod();
+		sesion.setAttribute("nom_p1",nom_p1);
 		iva1=prod1.getIva_com();
 		pc1=prod1.getPre_com();
 		pv1=prod1.getPre_ven();
+		sesion.setAttribute("pv1", pv1);
 		}
 		
 		//PROCESAR PRODUCTO 1
@@ -122,6 +130,7 @@ public class VentaController extends HttpServlet {
 			ProductosDTO prodto;
 			
 			cod2 = Integer.parseInt(request.getParameter("cod2"));
+			sesion.setAttribute("cod_2", cod2);
 			prodao = new ProductosDAO();
 			prodto = new ProductosDTO(cod2);
 			prod2 = prodao.ConsultarProducto(prodto);
@@ -138,9 +147,11 @@ public class VentaController extends HttpServlet {
 			
 			
 			nom_p2 = prod2.getNom_prod();
+			sesion.setAttribute("nom_p2", nom_p2);
 			iva2=prod2.getIva_com();
 			pc2=prod2.getPre_com();
 			pv2=prod2.getPre_ven();
+			sesion.setAttribute("pv2", pv2);
 			}
 			
 		//PROCESAR PRODUCTO 2
@@ -160,6 +171,7 @@ public class VentaController extends HttpServlet {
 				ProductosDTO prodto;
 				
 				cod3 = Integer.parseInt(request.getParameter("cod3"));
+				sesion.setAttribute("cod_3", cod3);
 				prodao = new ProductosDAO();
 				prodto = new ProductosDTO(cod3);
 				prod3 = prodao.ConsultarProducto(prodto);
@@ -176,9 +188,11 @@ public class VentaController extends HttpServlet {
 				
 				
 				nom_p3 = prod3.getNom_prod();
+				sesion.setAttribute("nom_p3", nom_p3);
 				iva3=prod3.getIva_com();
 				pc3=prod3.getPre_com();
 				pv3=prod3.getPre_ven();
+				sesion.setAttribute("pv3", pv3);
 				}
 				
 			//PROCESAR PRODUCTO 3
@@ -200,9 +214,9 @@ public class VentaController extends HttpServlet {
 				sesion.setAttribute("stt", stt);
 				tiva=tiva1+tiva2+tiva3;
 				sesion.setAttribute("tiva", tiva);
-				pagar=stt+tiva;
+				pagar=sbt1+sbt2+sbt3;
 				sesion.setAttribute("pagar", pagar);
-				
+				//JOptionPane.showMessageDialog(null, "stt: "+stt+"\ntiva: "+tiva+"\npagar: "+pagar);
 				response.sendRedirect("Menu_Ventas.jsp");
 				}
 		
@@ -226,7 +240,10 @@ public class VentaController extends HttpServlet {
 						VentasDAO consvent1;
 						consvent1= new VentasDAO();
 						codvent1=consvent1.ConsultarCodVta();
-						
+						sesion.setAttribute("cod_vta", codvent1);
+						DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+						sesion.setAttribute("fecha", dtf.format(LocalDateTime.now()));
+												
 						//registro detalle producto 1
 						dcant1=Integer.parseInt(cant1);
 						if(dcant1>0) {
@@ -279,7 +296,7 @@ public class VentaController extends HttpServlet {
 						c1=Integer.parseInt(cant1);
 						c2=Integer.parseInt(cant2);
 						c3=Integer.parseInt(cant3);
-						
+						/*
 						JOptionPane.showMessageDialog(null, "                         FACRTURA No " + codvent1 + "\n"
 																+ "Vendedor:  "+nom_u+ "\n"
 																+ "Cédula del cliente: " + ced_c + "           Nombre del cliente: " + nom_c + "\n"
@@ -291,8 +308,8 @@ public class VentaController extends HttpServlet {
 																+ "\n"+ "Total sin IVA: "+stt
 																+ "\n"+ "Total IVA: "+tiva
 																+ "\n"+ "Total a pagar: "+ pagar);
-						
-						response.sendRedirect("Menu_Ventas.jsp");
+						*/
+						response.sendRedirect("Factura.jsp");
 					
 					
 				}
